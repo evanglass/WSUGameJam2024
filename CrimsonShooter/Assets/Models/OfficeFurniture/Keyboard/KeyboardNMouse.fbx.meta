@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 2770069c3aa115a4ba13c765d6930fd1
+guid: 2661e6423305cae4e9b305706d4bb35f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Keyboard
+    second: {fileID: 2100000, guid: 5e1f387fcd1e44140b13093b8e59cbd1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

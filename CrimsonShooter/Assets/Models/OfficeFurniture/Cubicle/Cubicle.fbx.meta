@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 91d157f39d315cb4b9f8b98e42e0cf93
+guid: c490e91d7efdb124095e4c341c91f942
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cubicle
+    second: {fileID: 2100000, guid: 05e991cc51f5223438c17644bc67be83, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
