@@ -39,6 +39,7 @@ public class Timer : MonoBehaviour
                 on = false;
                 OnTimerFire.Invoke(on);
                 OnTimerFireOff.Invoke();
+                lastFireTime = Time.realtimeSinceStartup;
             }
         }
         else
@@ -48,6 +49,7 @@ public class Timer : MonoBehaviour
                 on = true;
                 OnTimerFire.Invoke(on);
                 OnTimerFireOn.Invoke();
+                lastFireTime = Time.realtimeSinceStartup;
             }
         }
     }
