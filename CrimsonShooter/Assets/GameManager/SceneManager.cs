@@ -30,4 +30,12 @@ public class SceneManager : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(scene.SceneBuildIndex, LoadSceneMode.Additive);
         activeScene = scene;
     }
+
+    public void NextScene()
+    {
+        if (activeScene.NextScene != null)
+        {
+            ChangeScene(activeScene.NextScene);
+        }
+    }
 }
