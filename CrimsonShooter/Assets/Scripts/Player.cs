@@ -1,4 +1,5 @@
 using KinematicCharacterController.Examples;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,14 +16,19 @@ public class Player : MonoBehaviour
         if(dead)
         {
             // DIE
-            transform.position += Vector3.down / 100.0f;
             GetComponent<ExampleCharacterController>().MaxStableMoveSpeed = 0;
             GetComponent<ExampleCharacterController>().MaxAirMoveSpeed = 0;
             GetComponent<CapsuleCollider>().enabled = false;
         }
         else
         {
-
+            if(Input.GetMouseButtonDown(0))
+            {
+                if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, 1000, LayerMask.GetMask("Enemy")))
+                {
+                    Destroy(hit.transform.gameObject);
+                }
+            }
         }
     }
 
