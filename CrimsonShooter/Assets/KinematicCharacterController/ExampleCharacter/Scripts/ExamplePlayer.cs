@@ -10,6 +10,7 @@ namespace KinematicCharacterController.Examples
     {
         public ExampleCharacterController Character;
         public ExampleCharacterCamera CharacterCamera;
+        public float mouseSensitivity = 1.5f;
 
         private const string MouseXInput = "Mouse X";
         private const string MouseYInput = "Mouse Y";
@@ -71,7 +72,7 @@ namespace KinematicCharacterController.Examples
 #endif
 
             // Apply inputs to the camera
-            CharacterCamera.UpdateWithInput(Time.deltaTime, scrollInput, lookInputVector);
+            CharacterCamera.UpdateWithInput(Time.deltaTime, scrollInput, lookInputVector * mouseSensitivity);
 
             // Handle toggling zoom level
             if (Input.GetMouseButtonDown(1))
