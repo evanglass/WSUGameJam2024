@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
+
     public const int maxHealth = 4;
     public int health = maxHealth;
     private bool dead = false;
@@ -13,23 +15,22 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if(dead)
-        {
-            // DIE
-            GetComponent<ExampleCharacterController>().MaxStableMoveSpeed = 0;
-            GetComponent<ExampleCharacterController>().MaxAirMoveSpeed = 0;
-            GetComponent<CapsuleCollider>().enabled = false;
-        }
-        else
-        {
-            if(Input.GetMouseButtonDown(0))
-            {
-                if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, 1000, LayerMask.GetMask("Enemy")))
-                {
-                    Destroy(hit.transform.gameObject);
-                }
-            }
-        }
+        //if(dead)
+        //{
+        //    // DIE
+        //    GetComponent<ExampleCharacterController>().MaxStableMoveSpeed = 0;
+        //    GetComponent<ExampleCharacterController>().MaxAirMoveSpeed = 0;
+        //    GetComponent<CapsuleCollider>().enabled = false;
+        //}
+        //else
+        //{
+        //    if(Input.GetMouseButtonDown(0))
+        //    {
+        //        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, 1000, LayerMask.GetMask("Enemy"))) {
+        //            Destroy(hit.transform.gameObject);
+        //        }
+        //    }
+        //}
     }
 
     public void TakeDamage()

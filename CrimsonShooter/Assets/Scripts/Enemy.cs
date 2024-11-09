@@ -21,34 +21,34 @@ public class Enemy : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
     }
 
-    void Update()
-    {
-        agent.SetDestination(target.position);
-        Vector3 direction = target.position - transform.position;
-        if(Physics.Raycast(transform.position, direction, out RaycastHit hit, stopDistance + 1, LayerMask.GetMask("Player","Obstacles")))
-        {
-            if(hit.transform.tag.Equals("Player"))
-            {
-                agent.stoppingDistance = stopDistance;
-                shootTimer += Time.deltaTime;
-                if(shootTimer >= shootDelay)
-                {
-                    shootTimer = 0;
-                    ShootProjectile();
-                }
-            }
-            else
-            {
-                agent.stoppingDistance -= 0.1f;
-                shootTimer = 0;
-            }
-        }
-        else
-        {
-            agent.stoppingDistance = stopDistance;
-            shootTimer = 0;
-        }
-    }
+    //void Update()
+    //{
+    //    agent.SetDestination(target.position);
+    //    Vector3 direction = target.position - transform.position;
+    //    if(Physics.Raycast(transform.position, direction, out RaycastHit hit, stopDistance + 1, LayerMask.GetMask("Player","Obstacles")))
+    //    {
+    //        if(hit.transform.tag.Equals("Player"))
+    //        {
+    //            agent.stoppingDistance = stopDistance;
+    //            shootTimer += Time.deltaTime;
+    //            if(shootTimer >= shootDelay)
+    //            {
+    //                shootTimer = 0;
+    //                ShootProjectile();
+    //            }
+    //        }
+    //        else
+    //        {
+    //            agent.stoppingDistance -= 0.1f;
+    //            shootTimer = 0;
+    //        }
+    //    }
+    //    else
+    //    {
+    //        agent.stoppingDistance = stopDistance;
+    //        shootTimer = 0;
+    //    }
+    //}
 
     void ShootProjectile()
     {
