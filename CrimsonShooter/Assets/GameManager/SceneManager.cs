@@ -39,7 +39,7 @@ public class SceneManager : MonoBehaviour
 
     private void OnLoadScene(Scene scene, LoadSceneMode lsm)
     {
-
+        UnityEngine.SceneManagement.SceneManager.SetActiveScene(scene);
     }
 
     public void ChangeScene(SceneDefinition scene)
