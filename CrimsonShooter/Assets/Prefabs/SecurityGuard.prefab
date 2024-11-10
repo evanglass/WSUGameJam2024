@@ -813,6 +813,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: aa68b133136ca5f42bc126aeb5c1f749, type: 3}
+      propertyPath: m_TagString
+      value: EffectSet4
+      objectReference: {fileID: 0}
     - target: {fileID: -8322347285714357362, guid: aa68b133136ca5f42bc126aeb5c1f749, type: 3}
       propertyPath: m_Layer
       value: 7

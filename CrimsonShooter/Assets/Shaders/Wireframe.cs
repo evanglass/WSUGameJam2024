@@ -5,7 +5,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(MeshRenderer))]
+[RequireComponent(typeof(Renderer))]
 [RequireComponent(typeof(MeshFilter))]
 public class Wireframe : MonoBehaviour
 {
@@ -47,7 +47,7 @@ public class Wireframe : MonoBehaviour
 
     private void Awake()
     {
-        materials = new List<Material>(GetComponent<MeshRenderer>().materials);
+        materials = new List<Material>(GetComponent<Renderer>().materials);
         UpdateMesh();
         UpdateWireframe();
     }
@@ -55,7 +55,7 @@ public class Wireframe : MonoBehaviour
     [ContextMenu("Update Wireframe")]
     private void UpdateWireframe()
     {
-        MeshRenderer renderer = GetComponent<MeshRenderer>();
+        Renderer renderer = GetComponent<Renderer>();
         Material[] renderMaterials = renderer.materials;
         for (int i = firstMaterialIndex; i < renderMaterials.Length; i++)
         {
@@ -74,7 +74,7 @@ public class Wireframe : MonoBehaviour
     [ContextMenu("Update Mesh")]
     public void UpdateMesh()
     {
-        if (!gameObject.activeSelf || !GetComponent<MeshRenderer>().enabled)
+        if (!gameObject.activeSelf || !GetComponent<Renderer>().enabled)
             return;
 
         Mesh m = GetComponent<MeshFilter>().sharedMesh;
