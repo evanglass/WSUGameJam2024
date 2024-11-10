@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private LayerMask targetLayers;
     [SerializeField] private GameObject muzzleFlashPrefab;
+    [SerializeField] private GameObject bulletHolePrefab;
+
     private Animator animator;
     private void Awake() {
         animator = GetComponentInChildren<Animator>();
@@ -31,6 +33,11 @@ public class Player : MonoBehaviour
                 rb.AddForce(cameraTransform.forward * gunDamage, ForceMode.Impulse);
             }
             trail.Initialize(hit.point);
+
+            if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Obstacles")) {
+                Instantiate(bulletHolePrefab, hit.point + (hit.normal / 100.0f), Quaternion.LookRotation(-hit.normal), hit.transform);
+            }
+            
         } else {
             trail.Initialize(muzzleTransform.position + cameraTransform.forward * maxRange);
         }

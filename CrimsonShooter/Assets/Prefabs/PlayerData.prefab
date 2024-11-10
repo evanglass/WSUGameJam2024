@@ -344,6 +344,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 247
   muzzleFlashPrefab: {fileID: 6940667806739951160, guid: 9dcbd457bff6f2247825677344156d84, type: 3}
+  bulletHolePrefab: {fileID: 2281504855690746160, guid: 3c1628bd7d770c54a999ccc7d64b42ed, type: 3}
   playerBulletTrailPrefab: {fileID: 1863393579866791843, guid: c641fd1f5535f77458173a40750f052a, type: 3}
   cameraTransform: {fileID: 4041578944875271414}
   muzzleTransform: {fileID: 7909590427281026385}
