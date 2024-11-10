@@ -2166,7 +2166,7 @@ MonoBehaviour:
   Touch:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1794959233}
+      - m_Target: {fileID: 1515650550}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -5695,6 +5695,156 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7585754702308190188, guid: fa11ad2419f4ca542968a44c99d1ca1c, type: 3}
   m_PrefabInstance: {fileID: 1369970427}
   m_PrefabAsset: {fileID: 0}
+--- !u!90 &863906609
+Avatar:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Automatic Avatar
+  m_AvatarSize: 832
+  m_Avatar:
+    serializedVersion: 3
+    m_AvatarSkeleton:
+      data:
+        m_Node:
+        - m_ParentId: -1
+          m_AxesId: -1
+        - m_ParentId: 0
+          m_AxesId: -1
+        - m_ParentId: 1
+          m_AxesId: -1
+        - m_ParentId: 0
+          m_AxesId: -1
+        m_ID: 00000000a5198c0a8011d9b211a7cb11
+        m_AxesArray: []
+    m_AvatarSkeletonPose:
+      data:
+        m_X:
+        - t: {x: 0, y: 1.65, z: 0}
+          q: {x: 0, y: 0, z: 0, w: 1}
+          s: {x: 1, y: 1, z: 1}
+        - t: {x: 0, y: -0.2, z: 0.4}
+          q: {x: 0.40673664, y: 0, z: 0, w: 0.9135455}
+          s: {x: 0.15, y: 0.015, z: 0.015}
+        - t: {x: 0, y: 0, z: 0}
+          q: {x: -0, y: -0, z: -0, w: 1}
+          s: {x: 0.95, y: 1.01, z: 1.01}
+        - t: {x: 0, y: 0, z: 0}
+          q: {x: 0, y: 0, z: 0, w: 1}
+          s: {x: 1, y: 1, z: 1}
+    m_DefaultPose:
+      data:
+        m_X:
+        - t: {x: 0, y: 1.65, z: 0}
+          q: {x: 0, y: 0, z: 0, w: 1}
+          s: {x: 1, y: 1, z: 1}
+        - t: {x: 0, y: -0.2, z: 0.4}
+          q: {x: 0.40673664, y: 0, z: 0, w: 0.9135455}
+          s: {x: 0.15, y: 0.015, z: 0.015}
+        - t: {x: 0, y: 0, z: 0}
+          q: {x: -0, y: -0, z: -0, w: 1}
+          s: {x: 0.95, y: 1.01, z: 1.01}
+        - t: {x: 0, y: 0, z: 0}
+          q: {x: 0, y: 0, z: 0, w: 1}
+          s: {x: 1, y: 1, z: 1}
+    m_SkeletonNameIDArray: 00000000a5198c0ab0e0806511a7cb11
+    m_Human:
+      data:
+        serializedVersion: 2
+        m_RootX:
+          t: {x: 0, y: 0, z: 0}
+          q: {x: 0, y: 0, z: 0, w: 1}
+          s: {x: 1, y: 1, z: 1}
+        m_Skeleton:
+          data:
+            m_Node: []
+            m_ID: 
+            m_AxesArray: []
+        m_SkeletonPose:
+          data:
+            m_X: []
+        m_LeftHand:
+          data:
+            m_HandBoneIndex: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        m_RightHand:
+          data:
+            m_HandBoneIndex: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        m_HumanBoneIndex: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        m_HumanBoneMass:
+        - 0.14545456
+        - 0.12121213
+        - 0.12121213
+        - 0.048484854
+        - 0.048484854
+        - 0.009696971
+        - 0.009696971
+        - 0.030303033
+        - 0.14545456
+        - 0.14545456
+        - 0.012121214
+        - 0.048484854
+        - 0.006060607
+        - 0.006060607
+        - 0.024242427
+        - 0.024242427
+        - 0.01818182
+        - 0.01818182
+        - 0.006060607
+        - 0.006060607
+        - 0.0024242427
+        - 0.0024242427
+        - 0
+        - 0
+        - 0
+        m_Scale: 1
+        m_ArmTwist: 0.5
+        m_ForeArmTwist: 0.5
+        m_UpperLegTwist: 0.5
+        m_LegTwist: 0.5
+        m_ArmStretch: 0.05
+        m_LegStretch: 0.05
+        m_FeetSpacing: 0
+        m_HasLeftHand: 0
+        m_HasRightHand: 0
+        m_HasTDoF: 0
+    m_HumanSkeletonIndexArray: 
+    m_HumanSkeletonReverseIndexArray: 
+    m_RootMotionBoneIndex: -1
+    m_RootMotionBoneX:
+      t: {x: 0, y: 0, z: 0}
+      q: {x: 0, y: 0, z: 0, w: 1}
+      s: {x: 1, y: 1, z: 1}
+    m_RootMotionSkeleton:
+      data:
+        m_Node: []
+        m_ID: 
+        m_AxesArray: []
+    m_RootMotionSkeletonPose:
+      data:
+        m_X: []
+    m_RootMotionSkeletonIndexArray: 
+  m_TOS:
+    0: 
+    176953765: HealthBar
+    298559249: PlayerCamera
+    3000570240: HealthBar/HealthFill
+  m_HumanDescription:
+    serializedVersion: 3
+    m_Human: []
+    m_Skeleton: []
+    m_ArmTwist: 0.5
+    m_ForeArmTwist: 0.5
+    m_UpperLegTwist: 0.5
+    m_LegTwist: 0.5
+    m_ArmStretch: 0.05
+    m_LegStretch: 0.05
+    m_FeetSpacing: 0
+    m_GlobalScale: 1
+    m_RootMotionBoneName: 
+    m_HasTranslationDoF: 0
+    m_HasExtraRoot: 0
+    m_SkeletonHasParents: 1
 --- !u!1 &868708359 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6857820648552974114, guid: fa11ad2419f4ca542968a44c99d1ca1c, type: 3}
@@ -6055,7 +6205,7 @@ MonoBehaviour:
   Touch:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1794959233}
+      - m_Target: {fileID: 1515650550}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -7126,7 +7276,7 @@ MonoBehaviour:
   Touch:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1794959233}
+      - m_Target: {fileID: 1515650550}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -7341,7 +7491,12 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.6
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8984770342275048989, guid: 048da11f463e2f149a39bc5db9fd39eb, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 863906609}
+    m_RemovedComponents:
+    - {fileID: 3922421328585652743, guid: 048da11f463e2f149a39bc5db9fd39eb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -7349,6 +7504,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 704319727}
   m_SourcePrefab: {fileID: 100100000, guid: 048da11f463e2f149a39bc5db9fd39eb, type: 3}
+--- !u!82 &1515650550 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4908237674882173660, guid: 048da11f463e2f149a39bc5db9fd39eb, type: 3}
+  m_PrefabInstance: {fileID: 1515650549}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1532039765 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7538739851360050475, guid: fa11ad2419f4ca542968a44c99d1ca1c, type: 3}
@@ -8177,11 +8337,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4636308244214748333, guid: b4c47362adaa01c4189a186fe9cc211e, type: 3}
   m_PrefabInstance: {fileID: 1776613133}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1794959233 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 3922421328585652743, guid: 048da11f463e2f149a39bc5db9fd39eb, type: 3}
-  m_PrefabInstance: {fileID: 1515650549}
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &1794959234 stripped
 Animator:
