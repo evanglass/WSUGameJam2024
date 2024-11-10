@@ -21,17 +21,20 @@ public class Computer : MonoBehaviour, ITakesShots
                 if (go.GetComponent<Wireframe>())
                 {
                     go.GetComponent<Wireframe>().UseWireframe = true;
-                    if (computersOnLevel == 3)
+                    if (go.name == "Level 1")
                     {
-                        go.GetComponent<Wireframe>().SetSpecificMats(new int[] { 0, 3 });
-                    }
-                    else if (computersOnLevel == 2)
-                    {
-                        go.GetComponent<Wireframe>().SetSpecificMats(new int[] { 1, 5 });
-                    }
-                    else if (computersOnLevel == 1)
-                    {
-                        go.GetComponent<Wireframe>().SetSpecificMats(new int[] { 2, 4 });
+                        if (computersOnLevel == 3)
+                        {
+                            go.GetComponent<Wireframe>().SetSpecificMats(new int[] { 0, 3 });
+                        }
+                        else if (computersOnLevel == 2)
+                        {
+                            go.GetComponent<Wireframe>().SetSpecificMats(new int[] { 1, 5 });
+                        }
+                        else if (computersOnLevel == 1)
+                        {
+                            go.GetComponent<Wireframe>().SetSpecificMats(new int[] { 2, 4 });
+                        }
                     }
                 }
             }
