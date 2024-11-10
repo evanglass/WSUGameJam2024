@@ -20,14 +20,23 @@ public class TextSceneManager : MonoBehaviour
     };
     public int dialogueIndex = 0;
     private bool ceoDead = false;
+    private bool outroFade = false;
 
     private void Start()
     {
         GetComponentsInChildren<TextMeshProUGUI>()[0].text = dialogues[0];
     }
 
+    private IEnumerator LoadSceneLate()
+    {
+        yield return new WaitForSeconds(6);
+        SceneManager.Instance.NextScene();
+    }
+
     void Update()
     {
+        if (outroFade)
+            return;
         if(!ceoDead && GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("finish attacking"))
         {
             ceoDead = true;
@@ -58,7 +67,9 @@ public class TextSceneManager : MonoBehaviour
         if(dialogueIndex == dialogues.Length - 1)
         {
             Debug.Log("game over");
-            // main menu
+            GameObject.FindGameObjectWithTag("CameraTransition").GetComponent<Animator>().SetBool("FadeOut", true);
+            StartCoroutine("LoadSceneLate");
+            outroFade = true;
         }
     }
 
