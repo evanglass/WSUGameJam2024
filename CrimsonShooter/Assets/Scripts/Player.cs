@@ -34,9 +34,10 @@ public class Player : MonoBehaviour
             }
             trail.Initialize(hit.point);
 
-            if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Obstacles")) {
-                Instantiate(bulletHolePrefab, hit.point + (hit.normal / 100.0f), Quaternion.LookRotation(-hit.normal), hit.transform);
-            }
+            GameObject bulletHole =Instantiate(bulletHolePrefab, hit.point + (hit.normal / 100.0f), Quaternion.LookRotation(-hit.normal), hit.transform);
+            bulletHole.transform.localScale = new Vector3(0.01f / bulletHole.transform.lossyScale.x, 0.01f / bulletHole.transform.lossyScale.y, 1 / bulletHole.transform.lossyScale.z);
+            
+            muzzleTransform.GetComponent<AudioSource>().Play();
             
         } else {
             trail.Initialize(muzzleTransform.position + cameraTransform.forward * maxRange);
