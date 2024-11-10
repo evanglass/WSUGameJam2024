@@ -9,6 +9,8 @@ TagManager:
   - EffectSet3
   - EffectSetMultipleMaterials
   - Elevator
+  - EffectSet4
+  - CameraTransition
   layers:
   - Default
   - TransparentFX
