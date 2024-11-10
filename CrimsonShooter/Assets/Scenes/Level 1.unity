@@ -7651,12 +7651,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2092133457}
     - target: {fileID: 3750924343813558894, guid: 048da11f463e2f149a39bc5db9fd39eb, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3750924343813558894, guid: 048da11f463e2f149a39bc5db9fd39eb, type: 3}
       propertyPath: maxHealth
       value: 2.1
       objectReference: {fileID: 0}
     - target: {fileID: 3750924343813558894, guid: 048da11f463e2f149a39bc5db9fd39eb, type: 3}
       propertyPath: meleeDamage
-      value: 15
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 3750924343813558894, guid: 048da11f463e2f149a39bc5db9fd39eb, type: 3}
       propertyPath: deathMessage
@@ -7923,7 +7927,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52
+  m_fontSize: 72
   m_fontSizeBase: 38.41
   m_fontWeight: 400
   m_enableAutoSizing: 1
