@@ -32,7 +32,8 @@ public class EnemyProjectile : MonoBehaviour {
         }
         else if(collision.gameObject.layer == LayerMask.NameToLayer("Obstacles"))
         {
-            Instantiate(bulletHolePrefab, collision.GetContact(0).point + (collision.GetContact(0).normal / 100.0f), Quaternion.LookRotation(-collision.GetContact(0).normal));
+            Physics.Raycast(collision.GetContact(0).point, transform.position - collision.GetContact(0).point, out RaycastHit hit, 1000, LayerMask.GetMask("Obstacles"));
+            Instantiate(bulletHolePrefab, hit.point + (hit.normal / 100.0f), Quaternion.LookRotation(-hit.normal));
             Destroy(gameObject);
         }
     }

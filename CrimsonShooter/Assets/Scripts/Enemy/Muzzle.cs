@@ -9,7 +9,7 @@ public class Muzzle : MonoBehaviour
         Ray ray = new Ray(transform.position, player.transform.position - transform.position);
         Debug.DrawRay(ray.origin, ray.direction * maxRange);
         if(Physics.Raycast(ray, out RaycastHit hit, maxRange, LayerMask.GetMask("Player", "Obstacles"))) {
-            if (hit.transform.tag == "Player") {
+            if (hit.transform.tag.Equals("Player")) {
                 return true;
             }
         }
