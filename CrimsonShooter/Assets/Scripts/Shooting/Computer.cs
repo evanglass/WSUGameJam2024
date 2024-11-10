@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class Computer : MonoBehaviour, ITakesShots
+
 {
+    [SerializeField] private Transform brokenComputer;
     static int computersOnLevel = 0;
     private void Awake()
     {
@@ -60,7 +62,9 @@ public class Computer : MonoBehaviour, ITakesShots
             }
         }
         // COMPUTER DESTROY EFFECT?
+
         Destroy(gameObject);
+        Instantiate(brokenComputer, transform.position, transform.rotation);
         computersOnLevel--;
         if(computersOnLevel == 0)
         {

@@ -20,7 +20,6 @@ public class StrafingState : EnemyState
     }
     protected override void OnEnable() {
         base.OnEnable();
-        Debug.Log("Entered Strafe State");
         navMeshAgent.updateRotation = false;
         BeginStrafe();
         timeUntilNextShot = Random.Range(0f, 2f);

@@ -7,12 +7,7 @@ public class MovingToPlayerState : EnemyState
     [SerializeField] private EnemyState strafeState;
     protected override void OnEnable() {
         base.OnEnable();
-        Debug.Log("Entered MovingToPlayer State");
 
-
-        animator.SetTrigger("Walking");
-
-        animator.speed = 1f;
 
         navMeshAgent.SetDestination(player.transform.position);
         navMeshAgent.updateRotation = true;
