@@ -5,7 +5,7 @@ using UnityEngine;
 public class SceneDefinitionContainer : MonoBehaviour
 {
     [SerializeField]
-    private SceneAsset scene;
+    private int buildIndex;
 
     [SerializeField]
     private SceneDefinitionContainer nextScene;
@@ -24,11 +24,11 @@ public class SceneDefinitionContainer : MonoBehaviour
         if (nextScene != null && !traversed.Contains(nextScene))
         {
             nextScene.Compile(traversed);
-            SceneDefinition = new SceneDefinition(scene, nextScene.SceneDefinition);
+            SceneDefinition = new SceneDefinition(buildIndex, nextScene.SceneDefinition);
         }
         else
         {
-            SceneDefinition = new SceneDefinition(scene, null);
+            SceneDefinition = new SceneDefinition(buildIndex, null);
         }
     }
 

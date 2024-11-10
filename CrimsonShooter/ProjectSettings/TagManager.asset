@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - EffectSet1
+  - EffectSet2
+  - EffectSet3
+  - EffectSetMultipleMaterials
+  - Elevator
   layers:
   - Default
   - TransparentFX

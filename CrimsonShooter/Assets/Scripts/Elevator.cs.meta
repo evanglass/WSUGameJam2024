@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: 9ecdb30069406684ca5682f5792ee347
+guid: 227c5bd934848c54f91335681120d1ff
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - wireframeMaterial: {fileID: 2100000, guid: 0cb77124966a02c4bbb98f92a7c94403, type: 2}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
