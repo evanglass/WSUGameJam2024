@@ -2447,7 +2447,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5969448677036845695, guid: b4c47362adaa01c4189a186fe9cc211e, type: 3}
       propertyPath: m_TagString
-      value: EffectSet1
+      value: EffectSet4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7941,7 +7941,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5969448677036845695, guid: b4c47362adaa01c4189a186fe9cc211e, type: 3}
       propertyPath: m_TagString
-      value: EffectSet1
+      value: EffectSet4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9079,7 +9079,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5969448677036845695, guid: b4c47362adaa01c4189a186fe9cc211e, type: 3}
       propertyPath: m_TagString
-      value: EffectSet1
+      value: EffectSet4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
