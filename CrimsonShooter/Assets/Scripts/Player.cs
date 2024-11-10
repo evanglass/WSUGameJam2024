@@ -9,7 +9,6 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask targetLayers;
     private void Shoot() {
         float maxRange = 100f;
-        float damage = 50f;
         RaycastHit hit;
         Debug.DrawRay(cameraTransform.position, cameraTransform.forward, Color.red, 10f);
         if(Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, maxRange, targetLayers)) {
@@ -18,13 +17,11 @@ public class Player : MonoBehaviour
 
             if(shotThing != null) {
                 Debug.Log("Shot " + hit.collider.gameObject);
-                if (shotThing.TakeShot(damage)) {
-                    if (hit.collider.gameObject.TryGetComponent(out Rigidbody rb)) {
-                        rb.AddForce(cameraTransform.forward * damage, ForceMode.Impulse);
-                    }
-                }
+                shotThing.TakeShot(gunDamage) ;
             }
-
+            if (hit.collider.gameObject.TryGetComponent(out Rigidbody rb)) {
+                rb.AddForce(cameraTransform.forward * gunDamage, ForceMode.Impulse);
+            }
 
         }
     }
