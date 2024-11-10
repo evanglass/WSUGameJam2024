@@ -30,7 +30,7 @@ public class EnemyProjectile : MonoBehaviour {
             collision.transform.GetComponent<Player>().TakeDamage();
             Destroy(gameObject);
         }
-        else
+        else if(collision.gameObject.layer == LayerMask.NameToLayer("Obstacles"))
         {
             Instantiate(bulletHolePrefab, collision.GetContact(0).point + (collision.GetContact(0).normal / 100.0f), Quaternion.LookRotation(-collision.GetContact(0).normal));
             Destroy(gameObject);
