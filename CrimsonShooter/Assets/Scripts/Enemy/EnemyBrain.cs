@@ -34,6 +34,7 @@ public class EnemyBrain : MonoBehaviour {
             dirToTarget += Random.insideUnitSphere * innaccuracy;
             dirToTarget.Normalize();
             proj.Fire(dirToTarget);
+            muzzle.GetComponent<AudioSource>().Play();
         }
     }
     private void OnEnable() {

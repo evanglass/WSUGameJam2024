@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5102165750660054805}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CubicleProps (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2026394763120868614}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CubicleProps (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,7 +81,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5419727989576920552}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cubicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3292687042668498042}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CubicleProps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7585754702308190188}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CubicleProps (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,9 +228,17 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2661e6423305cae4e9b305706d4bb35f, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2661e6423305cae4e9b305706d4bb35f, type: 3}
       propertyPath: m_Name
       value: KeyboardNMouse
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2661e6423305cae4e9b305706d4bb35f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2661e6423305cae4e9b305706d4bb35f, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -332,9 +340,17 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5c62200245121044baddb81530bb7bf9, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5c62200245121044baddb81530bb7bf9, type: 3}
       propertyPath: m_Name
       value: FilingCabinet
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5c62200245121044baddb81530bb7bf9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5c62200245121044baddb81530bb7bf9, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -440,9 +456,17 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 08f7b1c414f600f44bd497ebec0dcc67, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 08f7b1c414f600f44bd497ebec0dcc67, type: 3}
       propertyPath: m_Name
       value: Monitor
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 08f7b1c414f600f44bd497ebec0dcc67, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 08f7b1c414f600f44bd497ebec0dcc67, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -545,6 +569,10 @@ PrefabInstance:
       value: Chair
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e485e5a4a92115343974c8405111092d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e485e5a4a92115343974c8405111092d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 1
       objectReference: {fileID: 0}
@@ -614,9 +642,17 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5c62200245121044baddb81530bb7bf9, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5c62200245121044baddb81530bb7bf9, type: 3}
       propertyPath: m_Name
       value: FilingCabinet
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5c62200245121044baddb81530bb7bf9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5c62200245121044baddb81530bb7bf9, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -714,9 +750,17 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2661e6423305cae4e9b305706d4bb35f, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2661e6423305cae4e9b305706d4bb35f, type: 3}
       propertyPath: m_Name
       value: KeyboardNMouse
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2661e6423305cae4e9b305706d4bb35f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2661e6423305cae4e9b305706d4bb35f, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -814,9 +858,17 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2661e6423305cae4e9b305706d4bb35f, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2661e6423305cae4e9b305706d4bb35f, type: 3}
       propertyPath: m_Name
       value: KeyboardNMouse
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2661e6423305cae4e9b305706d4bb35f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2661e6423305cae4e9b305706d4bb35f, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -919,6 +971,10 @@ PrefabInstance:
       value: Chair
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e485e5a4a92115343974c8405111092d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e485e5a4a92115343974c8405111092d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 1
       objectReference: {fileID: 0}
@@ -984,9 +1040,17 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2661e6423305cae4e9b305706d4bb35f, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2661e6423305cae4e9b305706d4bb35f, type: 3}
       propertyPath: m_Name
       value: KeyboardNMouse
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2661e6423305cae4e9b305706d4bb35f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2661e6423305cae4e9b305706d4bb35f, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1092,9 +1156,17 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: cebe86ffb4ec8ed4bbcaa6574d829fa3, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cebe86ffb4ec8ed4bbcaa6574d829fa3, type: 3}
       propertyPath: m_Name
       value: Phone
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cebe86ffb4ec8ed4bbcaa6574d829fa3, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cebe86ffb4ec8ed4bbcaa6574d829fa3, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1200,9 +1272,17 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 08f7b1c414f600f44bd497ebec0dcc67, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 08f7b1c414f600f44bd497ebec0dcc67, type: 3}
       propertyPath: m_Name
       value: Monitor
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 08f7b1c414f600f44bd497ebec0dcc67, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 08f7b1c414f600f44bd497ebec0dcc67, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1305,6 +1385,10 @@ PrefabInstance:
       value: Chair
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e485e5a4a92115343974c8405111092d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e485e5a4a92115343974c8405111092d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 1
       objectReference: {fileID: 0}
@@ -1373,6 +1457,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e485e5a4a92115343974c8405111092d, type: 3}
       propertyPath: m_Name
       value: Chair
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e485e5a4a92115343974c8405111092d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e485e5a4a92115343974c8405111092d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1444,9 +1532,17 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5c62200245121044baddb81530bb7bf9, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5c62200245121044baddb81530bb7bf9, type: 3}
       propertyPath: m_Name
       value: FilingCabinet
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5c62200245121044baddb81530bb7bf9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5c62200245121044baddb81530bb7bf9, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1552,9 +1648,17 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 08f7b1c414f600f44bd497ebec0dcc67, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 08f7b1c414f600f44bd497ebec0dcc67, type: 3}
       propertyPath: m_Name
       value: Monitor
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 08f7b1c414f600f44bd497ebec0dcc67, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 08f7b1c414f600f44bd497ebec0dcc67, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1660,9 +1764,17 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: cebe86ffb4ec8ed4bbcaa6574d829fa3, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cebe86ffb4ec8ed4bbcaa6574d829fa3, type: 3}
       propertyPath: m_Name
       value: Phone
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cebe86ffb4ec8ed4bbcaa6574d829fa3, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cebe86ffb4ec8ed4bbcaa6574d829fa3, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1768,9 +1880,17 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: cebe86ffb4ec8ed4bbcaa6574d829fa3, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cebe86ffb4ec8ed4bbcaa6574d829fa3, type: 3}
       propertyPath: m_Name
       value: Phone
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cebe86ffb4ec8ed4bbcaa6574d829fa3, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cebe86ffb4ec8ed4bbcaa6574d829fa3, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1876,9 +1996,17 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: cebe86ffb4ec8ed4bbcaa6574d829fa3, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cebe86ffb4ec8ed4bbcaa6574d829fa3, type: 3}
       propertyPath: m_Name
       value: Phone
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cebe86ffb4ec8ed4bbcaa6574d829fa3, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cebe86ffb4ec8ed4bbcaa6574d829fa3, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2001,6 +2129,10 @@ PrefabInstance:
       value: Cubicle
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c490e91d7efdb124095e4c341c91f942, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c490e91d7efdb124095e4c341c91f942, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 1
       objectReference: {fileID: 0}
@@ -2023,6 +2155,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c490e91d7efdb124095e4c341c91f942, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7836055333340980025}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c490e91d7efdb124095e4c341c91f942, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3911678051032386285}
   m_SourcePrefab: {fileID: 100100000, guid: c490e91d7efdb124095e4c341c91f942, type: 3}
 --- !u!4 &8283372705429792584 stripped
 Transform:
@@ -2056,6 +2191,21 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 30945264241753363, guid: c490e91d7efdb124095e4c341c91f942, type: 3}
+--- !u!114 &3911678051032386285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8772910069651045874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ecdb30069406684ca5682f5792ee347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstMaterialIndex: 0
+  wireframeMaterial: {fileID: 2100000, guid: 0cb77124966a02c4bbb98f92a7c94403, type: 2}
+  useWireframe: 0
 --- !u!1001 &8741313425360405229
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2116,9 +2266,17 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 08f7b1c414f600f44bd497ebec0dcc67, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 08f7b1c414f600f44bd497ebec0dcc67, type: 3}
       propertyPath: m_Name
       value: Monitor
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 08f7b1c414f600f44bd497ebec0dcc67, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 08f7b1c414f600f44bd497ebec0dcc67, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2220,9 +2378,17 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5c62200245121044baddb81530bb7bf9, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5c62200245121044baddb81530bb7bf9, type: 3}
       propertyPath: m_Name
       value: FilingCabinet
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5c62200245121044baddb81530bb7bf9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5c62200245121044baddb81530bb7bf9, type: 3}
       propertyPath: m_StaticEditorFlags
