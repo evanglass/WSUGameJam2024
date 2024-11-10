@@ -48,6 +48,7 @@ public class Wireframe : MonoBehaviour
     private void Awake()
     {
         materials = new List<Material>(GetComponent<MeshRenderer>().materials);
+        UpdateMesh();
         UpdateWireframe();
     }
 
