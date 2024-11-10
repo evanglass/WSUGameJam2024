@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerBulletTrail : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private float speed;
+    [SerializeField] private float duration = 1f;
+    public void Initialize(Vector3 position) {
+        target = position - transform.position;
+        target.Normalize();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
+    private Vector3 target;
+    private float timer;
+    private void Update() {
+        transform.position += target * speed * Time.deltaTime;
+        timer += Time.deltaTime;
+        if (timer > duration) {
+            Destroy(gameObject);
+        }
+    }
+    
 }
