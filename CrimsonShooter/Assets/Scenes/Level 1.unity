@@ -179,7 +179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 481e85f7097cb9b4f8833ab09dd7878b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  webglTexture: {fileID: 0}
 --- !u!1 &35055429
 GameObject:
   m_ObjectHideFlags: 0
@@ -2100,7 +2099,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6839757259433119007, guid: fa11ad2419f4ca542968a44c99d1ca1c, type: 3}
+      propertyPath: m_TagString
+      value: EffectSet4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6129844270013514580, guid: fa11ad2419f4ca542968a44c99d1ca1c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -2781,7 +2785,7 @@ GameObject:
   - component: {fileID: 834461893}
   m_Layer: 6
   m_Name: Level 1
-  m_TagString: Untagged
+  m_TagString: EffectSet4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -2798,7 +2802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ecdb30069406684ca5682f5792ee347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstMaterialIndex: 3
+  firstMaterialIndex: 0
   wireframeMaterial: {fileID: 2100000, guid: 0cb77124966a02c4bbb98f92a7c94403, type: 2}
   useWireframe: 0
 --- !u!64 &834461894
@@ -6080,9 +6084,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6839757259433119007, guid: fa11ad2419f4ca542968a44c99d1ca1c, type: 3}
       propertyPath: m_TagString
-      value: EffectSet3
+      value: EffectSet4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6129844270013514580, guid: fa11ad2419f4ca542968a44c99d1ca1c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -6169,7 +6174,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 481e85f7097cb9b4f8833ab09dd7878b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  webglTexture: {fileID: 0}
 --- !u!1 &1222080605 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7816943175891544693, guid: fa11ad2419f4ca542968a44c99d1ca1c, type: 3}
@@ -6613,7 +6617,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d6e06e1af720cdf499660ebb7e2c5f9a, type: 2}
     - target: {fileID: 1675365973970484694, guid: fa11ad2419f4ca542968a44c99d1ca1c, type: 3}
       propertyPath: m_TagString
-      value: EffectSet2
+      value: EffectSet4
       objectReference: {fileID: 0}
     - target: {fileID: 2392565443119187533, guid: fa11ad2419f4ca542968a44c99d1ca1c, type: 3}
       propertyPath: m_Name
@@ -6659,7 +6663,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8420000247670902266, guid: fa11ad2419f4ca542968a44c99d1ca1c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -6843,7 +6848,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 481e85f7097cb9b4f8833ab09dd7878b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  webglTexture: {fileID: 0}
 --- !u!1 &1433578397 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2539939412237887471, guid: fa11ad2419f4ca542968a44c99d1ca1c, type: 3}

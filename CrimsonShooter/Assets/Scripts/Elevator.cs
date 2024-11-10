@@ -13,6 +13,12 @@ public class Elevator : MonoBehaviour
         }
     }
 
+    private IEnumerator LoadNext()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.Instance.NextScene();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(!initialized)
@@ -25,6 +31,7 @@ public class Elevator : MonoBehaviour
             if (GameObject.FindGameObjectWithTag("Elevator").GetComponent<Animator>().GetBool("Open"))
             {
                 GameObject.FindGameObjectWithTag("Elevator").GetComponent<Animator>().SetBool("Open", false);
+                StartCoroutine("LoadNext");
             }
         }
     }

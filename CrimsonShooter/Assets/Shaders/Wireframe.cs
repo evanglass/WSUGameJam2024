@@ -19,6 +19,26 @@ public class Wireframe : MonoBehaviour
     private bool useWireframe = false;
 
     private List<Material> materials;
+    private bool[] materialsEnabled;
+    private bool materialSelectionEnabled = false;
+
+    public void SetSpecificMats(int[] mats)
+    {
+        if(!materialSelectionEnabled)
+        {
+            materialSelectionEnabled = true;
+            for(int i = 0; i < materialsEnabled.Length; ++i)
+            {
+                materialsEnabled[i] = false;
+            }
+        }
+        foreach(int i in mats)
+        {
+            Debug.Log("SETT");
+            materialsEnabled[i] = true;
+        }
+        UpdateWireframe();
+    }
 
     public bool UseWireframe
     {
@@ -49,6 +69,11 @@ public class Wireframe : MonoBehaviour
     private void Awake()
     {
         materials = new List<Material>(GetComponent<Renderer>().materials);
+        materialsEnabled = new bool[GetComponent<Renderer>().materials.Length];
+        for (int i = 0; i < materialsEnabled.Length; ++i)
+        {
+            materialsEnabled[i] = true;
+        }
         UpdateMesh();
         UpdateWireframe();
     }
@@ -60,7 +85,8 @@ public class Wireframe : MonoBehaviour
         Material[] renderMaterials = renderer.materials;
         for (int i = firstMaterialIndex; i < renderMaterials.Length; i++)
         {
-            if (useWireframe)
+            Debug.Log(i + " " + materialsEnabled[i]);
+            if (useWireframe && materialsEnabled[i])
             {
                 renderMaterials[i] = wireframeMaterial;
             }

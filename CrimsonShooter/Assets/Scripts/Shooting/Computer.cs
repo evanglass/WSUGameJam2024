@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 public class Computer : MonoBehaviour, ITakesShots
 {
-    [SerializeField] private Texture webglTexture;
     static int computersOnLevel = 0;
     private void Awake()
     {
@@ -14,12 +13,45 @@ public class Computer : MonoBehaviour, ITakesShots
 
     public bool TakeShot(float damage)
     {
-        GameObject[] gos = GameObject.FindGameObjectsWithTag(tag);
-        foreach (GameObject go in gos)
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Level 1")
         {
-            if (go.GetComponent<Wireframe>())
-                go.GetComponent<Wireframe>().UseWireframe = true;
-            
+            GameObject[] gos = GameObject.FindGameObjectsWithTag(tag);
+            foreach (GameObject go in gos)
+            {
+                if (go.GetComponent<Wireframe>())
+                {
+                    go.GetComponent<Wireframe>().UseWireframe = true;
+                    if (computersOnLevel == 3)
+                    {
+                        Debug.Log("A");
+                        go.GetComponent<Wireframe>().SetSpecificMats(new int[] { 0, 3 });
+                    }
+                    else if (computersOnLevel == 2)
+                    {
+                        Debug.Log("B");
+                        go.GetComponent<Wireframe>().SetSpecificMats(new int[] { 1, 5 });
+                    }
+                    else if (computersOnLevel == 1)
+                    {
+                        Debug.Log("C");
+                        go.GetComponent<Wireframe>().SetSpecificMats(new int[] { 2, 4 });
+                    }
+                }
+            }
+        }
+        else
+        {
+            GameObject[] gos = GameObject.FindGameObjectsWithTag(tag);
+            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Level 1")
+            {
+                foreach (GameObject go in gos)
+                {
+                    if (go.GetComponent<Wireframe>())
+                    {
+                        go.GetComponent<Wireframe>().UseWireframe = true;
+                    }
+                }
+            }
         }
         // COMPUTER DESTROY EFFECT?
         Destroy(gameObject);
