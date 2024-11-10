@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private LayerMask targetLayers;
     [SerializeField] private GameObject muzzleFlashPrefab;
+    [SerializeField] private GameObject bulletHolePrefab;
+
     private Animator animator;
     private void Awake() {
         animator = GetComponentInChildren<Animator>();
@@ -31,6 +33,12 @@ public class Player : MonoBehaviour
                 rb.AddForce(cameraTransform.forward * gunDamage, ForceMode.Impulse);
             }
             trail.Initialize(hit.point);
+
+            GameObject bulletHole =Instantiate(bulletHolePrefab, hit.point + (hit.normal / 100.0f), Quaternion.LookRotation(-hit.normal), hit.transform);
+            bulletHole.transform.localScale = new Vector3(0.01f / bulletHole.transform.lossyScale.x, 0.01f / bulletHole.transform.lossyScale.y, 1 / bulletHole.transform.lossyScale.z);
+            
+            muzzleTransform.GetComponent<AudioSource>().Play();
+            
         } else {
             trail.Initialize(muzzleTransform.position + cameraTransform.forward * maxRange);
         }
