@@ -21,6 +21,7 @@ public class MovingToPlayerState : EnemyState
     private void Update() {
         if (muzzle.CanSeePlayer(player)) {
             brain.SwitchState(strafeState);
+            brain.SetAimTarget(player.GetCenterOfMass());
         }
     }
     private float navTime = 0.5f;

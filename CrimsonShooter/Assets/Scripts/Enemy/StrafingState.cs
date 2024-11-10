@@ -37,11 +37,9 @@ public class StrafingState : EnemyState
         strafeToggle = !strafeToggle;
         if (strafeToggle) {
             Utilities.SetAgentStrafeLeft(navMeshAgent, navMeshAgent.transform, player.transform, strafeDistance);
-            animator.SetTrigger("StrafeRight");
 
         } else {
             Utilities.SetAgentStrafeRight(navMeshAgent, navMeshAgent.transform, player.transform, strafeDistance);
-            animator.SetTrigger("StrafeLeft");
 
 
         }

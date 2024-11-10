@@ -7,6 +7,10 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
+    [SerializeField] private Transform centerOfMass;
+    public Transform GetCenterOfMass() {
+        return centerOfMass;
+    }
 
     public const int maxHealth = 4;
     public int health = maxHealth;
