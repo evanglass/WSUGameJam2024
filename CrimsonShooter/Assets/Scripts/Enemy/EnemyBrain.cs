@@ -30,7 +30,7 @@ public class EnemyBrain : MonoBehaviour, ITakesShots {
         if(enemyProjectilePrefab != null) {
             EnemyProjectile proj = Instantiate(enemyProjectilePrefab, muzzle.transform.position, muzzle.transform.rotation);
             Vector3 dirToTarget = (target.position - muzzle.transform.position).normalized;
-
+            Debug.DrawLine(muzzle.transform.position, target.position, Color.red, 10f);
             dirToTarget += Random.insideUnitSphere * innaccuracy;
             dirToTarget.Normalize();
             proj.Fire(dirToTarget);

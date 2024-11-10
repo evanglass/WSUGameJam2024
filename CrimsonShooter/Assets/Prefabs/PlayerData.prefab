@@ -56,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 1510353404963685543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.29, z: 0}
+  m_LocalPosition: {x: 0, y: 0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -345,6 +345,8 @@ MonoBehaviour:
     m_Bits: 247
   muzzleFlashPrefab: {fileID: 6940667806739951160, guid: 9dcbd457bff6f2247825677344156d84, type: 3}
   bulletHolePrefab: {fileID: 2281504855690746160, guid: 3c1628bd7d770c54a999ccc7d64b42ed, type: 3}
+  vignette: {fileID: 0}
+  deathMessage: {fileID: 0}
   maxAmmo: 10
   ammo: 0
   playerBulletTrailPrefab: {fileID: 1863393579866791843, guid: c641fd1f5535f77458173a40750f052a, type: 3}
@@ -526,6 +528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24092a40b02616e479baeb940325e339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shakeFactor: 0
   Camera: {fileID: 7460879994530985439}
   FollowPointFraming: {x: 0, y: 0}
   FollowingSharpness: 10000

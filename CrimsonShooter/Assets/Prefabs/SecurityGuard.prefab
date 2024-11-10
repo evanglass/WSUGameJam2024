@@ -351,7 +351,7 @@ MonoBehaviour:
   startingState: {fileID: 1583361223372649472}
   muzzleFlash: {fileID: 6940667806739951160, guid: 9dcbd457bff6f2247825677344156d84, type: 3}
   enemyProjectilePrefab: {fileID: -1736261065240720055, guid: db813c49d8526c54789b4f91eeaa1228, type: 3}
-  innaccuracy: 0.1
+  innaccuracy: 0.03
   maxHealth: 0
 --- !u!1 &3878265603792039314
 GameObject:

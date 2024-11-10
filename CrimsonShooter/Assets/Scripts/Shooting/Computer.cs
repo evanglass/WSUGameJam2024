@@ -20,9 +20,15 @@ public class Computer : MonoBehaviour, ITakesShots
     // level 1 object
     // go.GetComponent<Wireframe>().SetSpecificMats(new int[] { 0, 3 }, true); // enable wireframe for materials 0 and 3 for object
     // go.GetComponent<Wireframe>().SetSpecificMats(new int[] { 0, 3 }, false); // disable wireframe for materials 0 and 3 for object
+    bool isDead = false;
+
 
     public bool TakeShot(float damage)
     {
+        if (isDead) {
+            return true;
+        }
+        isDead = true;
         if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Level 1")
         {
             GameObject[] gos = GameObject.FindGameObjectsWithTag(tag);

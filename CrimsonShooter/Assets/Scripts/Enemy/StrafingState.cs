@@ -15,7 +15,7 @@ public class StrafingState : EnemyState
     private void FireShot() {
         shotTimer = 0f;
         timeUntilNextShot = Random.Range(randomShotTimeRange.x, randomShotTimeRange.y);
-        brain.Shoot(player.transform);
+        brain.Shoot(player.GetCenterOfMass());
 
     }
     protected override void OnEnable() {
