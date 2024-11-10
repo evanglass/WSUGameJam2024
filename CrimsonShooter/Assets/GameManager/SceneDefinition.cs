@@ -5,25 +5,21 @@ using UnityEngine.SceneManagement;
 public class SceneDefinition
 {
     [SerializeField]
-    private SceneAsset scene;
+    private int buildIndex;
 
     [SerializeField]
     private SceneDefinition nextScene;
     public SceneDefinition NextScene { get => nextScene; }
 
-    public SceneDefinition(SceneAsset scene, SceneDefinition nextScene)
+    public SceneDefinition(int buildIndex, SceneDefinition nextScene)
     {
-        this.scene = scene;
+        this.buildIndex = buildIndex;
         this.nextScene = nextScene;
     }
 
     public int SceneBuildIndex
     {
-        get
-        {
-            string scenePath = "Assets/Scenes/" + scene.name + ".unity";
-            return SceneUtility.GetBuildIndexByScenePath(scenePath);
-        }
+        get => buildIndex;
     }
 
 }

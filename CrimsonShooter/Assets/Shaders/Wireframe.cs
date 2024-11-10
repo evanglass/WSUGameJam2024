@@ -26,6 +26,7 @@ public class Wireframe : MonoBehaviour
         set
         {
             useWireframe = value;
+            UpdateMesh();
             UpdateWireframe();
         }
     }
