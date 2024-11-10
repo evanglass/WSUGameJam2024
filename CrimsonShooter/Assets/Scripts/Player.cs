@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     private void Awake() {
         animator = GetComponentInChildren<Animator>();
         ammo = maxAmmo;
+        health = maxHealth;
     }
     private void Shoot() {
         animator.SetTrigger("Fire");
@@ -67,13 +68,18 @@ public class Player : MonoBehaviour
         return centerOfMass;
     }
 
-    public const int maxHealth = 4;
-    public int health = maxHealth;
+   [SerializeField] private float maxHealth = 1.1f;
+
+    public float health;
     private bool dead = false;
     public GameObject healthBar;
 
+    [SerializeField] private float healthRecoveryRate;
     private void Update()
     {
+        health = Mathf.MoveTowards(health, maxHealth, healthRecoveryRate * Time.deltaTime);
+        vignette.color = new Color(vignette.color.r, vignette.color.g, vignette.color.b, ((float)maxHealth - (float)health) / (float)maxHealth);
+
         if (dead) {
             if (Input.GetKeyDown(KeyCode.Space)) {
                 SceneManager.Instance.ReloadScene();
@@ -120,9 +126,7 @@ public class Player : MonoBehaviour
 
     public void TakeDamage()
     {
-        health--;
-        vignette.color = new Color(vignette.color.r, vignette.color.g, vignette.color.b, ((float)maxHealth - (float)health) / (float)maxHealth);
-        healthBar.GetComponent<HealthBar>().health = (float)health / maxHealth;
+        health -= 1f;
         if(health <= 0)
         {
             dead = true;
