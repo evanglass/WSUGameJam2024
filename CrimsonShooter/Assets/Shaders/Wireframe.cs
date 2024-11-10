@@ -34,7 +34,6 @@ public class Wireframe : MonoBehaviour
         }
         foreach(int i in mats)
         {
-            Debug.Log("SETT");
             materialsEnabled[i] = true;
         }
         UpdateWireframe();
@@ -85,7 +84,6 @@ public class Wireframe : MonoBehaviour
         Material[] renderMaterials = renderer.materials;
         for (int i = firstMaterialIndex; i < renderMaterials.Length; i++)
         {
-            Debug.Log(i + " " + materialsEnabled[i]);
             if (useWireframe && materialsEnabled[i])
             {
                 renderMaterials[i] = wireframeMaterial;
