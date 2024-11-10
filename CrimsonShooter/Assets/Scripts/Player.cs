@@ -76,7 +76,7 @@ public class Player : MonoBehaviour
             Shoot();
         }
 
-        if (ammo != maxAmmo && Input.GetKeyDown(KeyCode.R))
+        if (ammo != maxAmmo && ammo >= 0 && Input.GetKeyDown(KeyCode.R))
         {
             animator.SetTrigger("Reload");
             animator.SetBool("HasReloaded", false);
