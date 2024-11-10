@@ -52,6 +52,11 @@ public class SceneManager : MonoBehaviour
         activeScene = scene;
     }
 
+    public void ReloadScene()
+    {
+        ChangeScene(activeScene);
+    }
+
     public void NextScene()
     {
         if (activeScene.NextScene != null)

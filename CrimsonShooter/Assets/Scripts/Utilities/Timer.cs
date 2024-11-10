@@ -12,12 +12,19 @@ public class Timer : MonoBehaviour
     private float offTime;
 
     [SerializeField]
+    private bool startRunning = true;
+    
+    [SerializeField]
+    private bool runOnce;
+
+    [SerializeField]
     private bool startOn;
 
     public UnityEvent<bool> OnTimerFire;
     public UnityEvent OnTimerFireOn;
     public UnityEvent OnTimerFireOff;
 
+    private bool running;
     private bool on;
 
     private float lastFireTime;
@@ -26,31 +33,44 @@ public class Timer : MonoBehaviour
     void Start()
     {
         on = startOn;
+        running = startRunning;
         lastFireTime = Time.realtimeSinceStartup;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (on)
-        {
-            if (Time.realtimeSinceStartup - lastFireTime > offTime)
+        if (running) {
+            if (on)
             {
-                on = false;
-                OnTimerFire.Invoke(on);
-                OnTimerFireOff.Invoke();
-                lastFireTime = Time.realtimeSinceStartup;
+                if (Time.realtimeSinceStartup - lastFireTime > offTime)
+                {
+                    on = false;
+                    OnTimerFire.Invoke(on);
+                    OnTimerFireOff.Invoke();
+                    lastFireTime = Time.realtimeSinceStartup;
+                }
+            }
+            else
+            {
+                if (Time.realtimeSinceStartup - lastFireTime > onTime)
+                {
+                    on = true;
+                    OnTimerFire.Invoke(on);
+                    OnTimerFireOn.Invoke();
+                    lastFireTime = Time.realtimeSinceStartup;
+                    if (runOnce)
+                    {
+                        running = false;
+                    }
+                }
             }
         }
-        else
-        {
-            if (Time.realtimeSinceStartup - lastFireTime > onTime)
-            {
-                on = true;
-                OnTimerFire.Invoke(on);
-                OnTimerFireOn.Invoke();
-                lastFireTime = Time.realtimeSinceStartup;
-            }
-        }
+    }
+
+    public void StartTimer()
+    {
+        running = true;
+        lastFireTime = Time.realtimeSinceStartup;
     }
 }

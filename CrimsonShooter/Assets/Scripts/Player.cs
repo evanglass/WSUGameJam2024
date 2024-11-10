@@ -74,6 +74,16 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        if (dead) {
+            if (Input.GetKeyDown(KeyCode.Space)) {
+                SceneManager.Instance.ReloadScene();
+            }
+
+            return;
+        }
+
+
+
         if (Input.GetMouseButtonDown(0) && ammo > 0) {
             Shoot();
         }
@@ -111,7 +121,7 @@ public class Player : MonoBehaviour
     public void TakeDamage()
     {
         health--;
-        vignette.color = new Color(vignette.color.r, vignette.color.g, vignette.color.b, (maxHealth - health) / maxHealth);
+        vignette.color = new Color(vignette.color.r, vignette.color.g, vignette.color.b, ((float)maxHealth - (float)health) / (float)maxHealth);
         healthBar.GetComponent<HealthBar>().health = (float)health / maxHealth;
         if(health <= 0)
         {
