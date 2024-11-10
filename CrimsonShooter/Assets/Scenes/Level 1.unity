@@ -237,6 +237,18 @@ MonoBehaviour:
           m_StringArgument: Quiet
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1703495330}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Quiet
+          m_BoolArgument: 1
+        m_CallState: 2
   Untouch:
     m_PersistentCalls:
       m_Calls: []
@@ -292,9 +304,6 @@ MonoBehaviour:
   startOn: 0
   OnTimerFire:
     m_PersistentCalls:
-      m_Calls: []
-  OnTimerFireOn:
-    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 35055433}
         m_TargetAssemblyTypeName: SceneTransition, Assembly-CSharp
@@ -308,6 +317,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnTimerFireOn:
+    m_PersistentCalls:
+      m_Calls: []
   OnTimerFireOff:
     m_PersistentCalls:
       m_Calls: []
@@ -7778,8 +7790,112 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2458219734760911582, guid: f0ffe6b04ee177442b14cdaf141a556c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 35055430}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7983043468173835170, guid: f0ffe6b04ee177442b14cdaf141a556c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1703495330}
   m_SourcePrefab: {fileID: 100100000, guid: f0ffe6b04ee177442b14cdaf141a556c, type: 3}
+--- !u!1 &1703495329 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7983043468173835170, guid: f0ffe6b04ee177442b14cdaf141a556c, type: 3}
+  m_PrefabInstance: {fileID: 1703495328}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1703495330
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703495329}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 9898ee7512275504a82a4a4a64b3f242, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &1707802430 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5419727989576920552, guid: fa11ad2419f4ca542968a44c99d1ca1c, type: 3}
