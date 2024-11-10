@@ -342,6 +342,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1885943935}
+  - {fileID: 2092133456}
   - {fileID: 1927674967}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7216,6 +7217,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3750924343813558894, guid: 048da11f463e2f149a39bc5db9fd39eb, type: 3}
+      propertyPath: vignette
+      value: 
+      objectReference: {fileID: 2092133457}
+    - target: {fileID: 3750924343813558894, guid: 048da11f463e2f149a39bc5db9fd39eb, type: 3}
+      propertyPath: deathMessage
+      value: 
+      objectReference: {fileID: 1927674968}
     - target: {fileID: 4432715539038976623, guid: 048da11f463e2f149a39bc5db9fd39eb, type: 3}
       propertyPath: m_Name
       value: PlayerData
@@ -7232,6 +7241,10 @@ PrefabInstance:
       propertyPath: MeshRoot
       value: 
       objectReference: {fileID: 633207098}
+    - target: {fileID: 6152459006221457033, guid: 048da11f463e2f149a39bc5db9fd39eb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.6
+      objectReference: {fileID: 0}
     - target: {fileID: 7033136465508530989, guid: 048da11f463e2f149a39bc5db9fd39eb, type: 3}
       propertyPath: m_Center.y
       value: 1
@@ -8643,7 +8656,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 398511848}
-  - {fileID: 2092133456}
   - {fileID: 1591384033}
   - {fileID: 1753331770}
   m_Father: {fileID: 54190580}
@@ -8795,7 +8807,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1927674967}
+  m_Father: {fileID: 54190580}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -8815,7 +8827,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5018867, g: 0.11174083, b: 0.11174083, a: 1}
+  m_Color: {r: 0.5018867, g: 0.11174083, b: 0.11174083, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

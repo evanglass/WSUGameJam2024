@@ -3,12 +3,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     [SerializeField] private LayerMask targetLayers;
     [SerializeField] private GameObject muzzleFlashPrefab;
     [SerializeField] private GameObject bulletHolePrefab;
+    [SerializeField] private Image vignette;
+    [SerializeField] private CanvasGroup deathMessage;
     [SerializeField] private int maxAmmo;
 
     [SerializeField] private int ammo;
@@ -108,10 +111,12 @@ public class Player : MonoBehaviour
     public void TakeDamage()
     {
         health--;
+        vignette.color = new Color(vignette.color.r, vignette.color.g, vignette.color.b, (maxHealth - health) / maxHealth);
         healthBar.GetComponent<HealthBar>().health = (float)health / maxHealth;
         if(health <= 0)
         {
             dead = true;
+            deathMessage.alpha = 1;
         }
     }
 }
