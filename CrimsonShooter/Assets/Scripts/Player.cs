@@ -34,7 +34,6 @@ public class Player : MonoBehaviour
             ITakesShots shotThing = hit.collider.GetComponent<ITakesShots>();
 
             if(shotThing != null) {
-                Debug.Log("Shot " + hit.collider.gameObject);
                 shotThing.TakeShot(gunDamage) ;
             }
             if (hit.collider.gameObject.TryGetComponent(out Rigidbody rb)) {
@@ -53,12 +52,34 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void Melee()
+    {
+        float maxRange = 5f;
+        RaycastHit hit;
+        if (Physics.SphereCast(cameraTransform.position, .2f, cameraTransform.forward, out hit, maxRange, targetLayers))
+        {
+
+            ITakesShots shotThing = hit.collider.GetComponent<ITakesShots>();
+
+            if (shotThing != null)
+            {
+                shotThing.TakeShot(gunDamage);
+            }
+            if (hit.collider.gameObject.TryGetComponent(out Rigidbody rb))
+            {
+                rb.AddForce(cameraTransform.forward * meleeDamage, ForceMode.Impulse);
+            }
+
+        }
+    }
+
     [SerializeField] private PlayerBulletTrail playerBulletTrailPrefab;
 
     [SerializeField] private Transform cameraTransform;
     [SerializeField] private Transform muzzleTransform;
 
     [SerializeField] private float gunDamage;
+    [SerializeField] private float meleeDamage;
 
 
 
@@ -88,8 +109,9 @@ public class Player : MonoBehaviour
             return;
         }
 
-
-
+        if (Input.GetMouseButtonDown(1)) {
+            Melee();
+        }
         if (Input.GetMouseButtonDown(0) && ammo > 0) {
             Shoot();
         }

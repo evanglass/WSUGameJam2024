@@ -19,7 +19,7 @@ public class Wireframe : MonoBehaviour
     private bool useWireframe = false;
 
     private List<Material> materials;
-    private bool[] materialsEnabled;
+    [SerializeField] private bool[] materialsEnabled;
     private bool materialSelectionEnabled = false;
 
     public void SetSpecificMats(int[] mats, bool enable)
