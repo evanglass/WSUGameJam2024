@@ -7,10 +7,18 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private LayerMask targetLayers;
+    [SerializeField] private GameObject muzzleFlashPrefab;
+    private Animator animator;
+    private void Awake() {
+        animator = GetComponentInChildren<Animator>();
+    }
     private void Shoot() {
+        animator.SetTrigger("Fire");
         float maxRange = 100f;
         RaycastHit hit;
         Debug.DrawRay(cameraTransform.position, cameraTransform.forward, Color.red, 10f);
+        PlayerBulletTrail trail = Instantiate(playerBulletTrailPrefab, muzzleTransform.position,muzzleTransform.rotation);
+        Instantiate(muzzleFlashPrefab, muzzleTransform.position, Quaternion.identity, transform);
         if(Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, maxRange, targetLayers)) {
 
             ITakesShots shotThing = hit.collider.GetComponent<ITakesShots>();
@@ -22,10 +30,13 @@ public class Player : MonoBehaviour
             if (hit.collider.gameObject.TryGetComponent(out Rigidbody rb)) {
                 rb.AddForce(cameraTransform.forward * gunDamage, ForceMode.Impulse);
             }
-
+            trail.Initialize(hit.point);
+        } else {
+            trail.Initialize(muzzleTransform.position + cameraTransform.forward * maxRange);
         }
     }
 
+    [SerializeField] private PlayerBulletTrail playerBulletTrailPrefab;
 
     [SerializeField] private Transform cameraTransform;
     [SerializeField] private Transform muzzleTransform;
