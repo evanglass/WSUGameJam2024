@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject bulletHolePrefab;
     [SerializeField] private int maxAmmo;
 
-    private int ammo;
+    [SerializeField] private int ammo;
 
     private Animator animator;
     private void Awake() {
@@ -41,9 +41,8 @@ public class Player : MonoBehaviour
             GameObject bulletHole =Instantiate(bulletHolePrefab, hit.point + (hit.normal / 100.0f), Quaternion.LookRotation(-hit.normal), hit.transform);
             bulletHole.transform.localScale = new Vector3(0.01f / bulletHole.transform.lossyScale.x, 0.01f / bulletHole.transform.lossyScale.y, 1 / bulletHole.transform.lossyScale.z);
             
-            muzzleTransform.GetComponent<AudioSource>().Play();
-
             ammo--;
+            muzzleTransform.GetComponent<AudioSource>().Play();
             
         } else {
             trail.Initialize(muzzleTransform.position + cameraTransform.forward * maxRange);

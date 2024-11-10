@@ -22,7 +22,7 @@ public class Wireframe : MonoBehaviour
     private bool[] materialsEnabled;
     private bool materialSelectionEnabled = false;
 
-    public void SetSpecificMats(int[] mats)
+    public void SetSpecificMats(int[] mats, bool enable)
     {
         if(!materialSelectionEnabled)
         {
@@ -34,7 +34,7 @@ public class Wireframe : MonoBehaviour
         }
         foreach(int i in mats)
         {
-            materialsEnabled[i] = true;
+            materialsEnabled[i] = enable;
         }
         UpdateWireframe();
     }

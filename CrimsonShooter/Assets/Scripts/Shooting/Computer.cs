@@ -11,6 +11,14 @@ public class Computer : MonoBehaviour, ITakesShots
         computersOnLevel++;
     }
 
+    // all objects except Level 1 environment
+    // go.GetComponent<Wireframe>().UseWireframe = true; // enable wireframe for object
+    // go.GetComponent<Wireframe>().UseWireframe = false; // disable wireframe for object
+    //
+    // level 1 object
+    // go.GetComponent<Wireframe>().SetSpecificMats(new int[] { 0, 3 }, true); // enable wireframe for materials 0 and 3 for object
+    // go.GetComponent<Wireframe>().SetSpecificMats(new int[] { 0, 3 }, false); // disable wireframe for materials 0 and 3 for object
+
     public bool TakeShot(float damage)
     {
         if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Level 1")
@@ -25,15 +33,15 @@ public class Computer : MonoBehaviour, ITakesShots
                     {
                         if (computersOnLevel == 3)
                         {
-                            go.GetComponent<Wireframe>().SetSpecificMats(new int[] { 0, 3 });
+                            go.GetComponent<Wireframe>().SetSpecificMats(new int[] { 0, 3 }, true);
                         }
                         else if (computersOnLevel == 2)
                         {
-                            go.GetComponent<Wireframe>().SetSpecificMats(new int[] { 1, 5 });
+                            go.GetComponent<Wireframe>().SetSpecificMats(new int[] { 1, 5 }, true);
                         }
                         else if (computersOnLevel == 1)
                         {
-                            go.GetComponent<Wireframe>().SetSpecificMats(new int[] { 2, 4 });
+                            go.GetComponent<Wireframe>().SetSpecificMats(new int[] { 2, 4 }, true);
                         }
                     }
                 }
@@ -42,14 +50,12 @@ public class Computer : MonoBehaviour, ITakesShots
         else
         {
             GameObject[] gos = GameObject.FindGameObjectsWithTag(tag);
-            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Level 1")
+            
+            foreach (GameObject go in gos)
             {
-                foreach (GameObject go in gos)
+                if (go.GetComponent<Wireframe>())
                 {
-                    if (go.GetComponent<Wireframe>())
-                    {
-                        go.GetComponent<Wireframe>().UseWireframe = true;
-                    }
+                    go.GetComponent<Wireframe>().UseWireframe = true;
                 }
             }
         }
