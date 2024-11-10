@@ -69,6 +69,9 @@ public class EnemyBrain : MonoBehaviour {
         }
         if (rc == null) {
             rc = GetComponentInParent<RagdollController>();
+            if (rc == null) {
+                Debug.Log("No RagdollControllerFound");
+            }
         }
     }
 

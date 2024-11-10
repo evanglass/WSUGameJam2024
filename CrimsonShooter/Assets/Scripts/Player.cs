@@ -6,6 +6,18 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    private void Shoot() {
+
+    }
+
+
+    [SerializeField] private Transform cameraTransform;
+    [SerializeField] private Transform muzzleTransform;
+
+    [SerializeField] private float gunDamage;
+
+
+
 
     [SerializeField] private Transform centerOfMass;
     public Transform GetCenterOfMass() {
