@@ -96,6 +96,7 @@ public class Player : MonoBehaviour
 
         if (ammo != maxAmmo && ammo >= 0 && Input.GetKeyDown(KeyCode.R))
         {
+            GetComponent<AudioSource>().Play();
             animator.SetTrigger("Reload");
             animator.SetBool("HasReloaded", false);
             ammo = -1;
