@@ -6,8 +6,27 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private LayerMask targetLayers;
     private void Shoot() {
+        float maxRange = 100f;
+        float damage = 50f;
+        RaycastHit hit;
+        Debug.DrawRay(cameraTransform.position, cameraTransform.forward, Color.red, 10f);
+        if(Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, maxRange, targetLayers)) {
 
+            ITakesShots shotThing = hit.collider.GetComponent<ITakesShots>();
+
+            if(shotThing != null) {
+                Debug.Log("Shot " + hit.collider.gameObject);
+                if (shotThing.TakeShot(damage)) {
+                    if (hit.collider.gameObject.TryGetComponent(out Rigidbody rb)) {
+                        rb.AddForce(cameraTransform.forward * damage, ForceMode.Impulse);
+                    }
+                }
+            }
+
+
+        }
     }
 
 
@@ -31,6 +50,9 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetMouseButtonDown(0)) {
+            Shoot();
+        }
         //if(dead)
         //{
         //    // DIE

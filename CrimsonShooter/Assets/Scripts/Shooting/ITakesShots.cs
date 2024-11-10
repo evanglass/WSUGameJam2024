@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface ITakesShots 
 {
-    public void ITakesShots(float damage, Vector3 dir);
+    public bool TakeShot(float damage);
 }

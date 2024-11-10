@@ -30,15 +30,17 @@ public class RagdollController : MonoBehaviour {
             rb.isKinematic = !isRagdoll;
         }
 
-        foreach (Collider col in ragdollColliders) {
-            // Ignore the main collider if you have one (e.g., a capsule for the root)
-            if (col.gameObject == gameObject) continue;
+        //foreach (Collider col in ragdollColliders) {
+        //    // Ignore the main collider if you have one (e.g., a capsule for the root)
+        //    if (col.gameObject == gameObject) continue;
 
-            col.enabled = isRagdoll;
-        }
+        //    col.enabled = isRagdoll;
+        //}
     }
 
     public void TriggerRagdoll() {
+
         SetRagdollMode(true);
     }
+
 }

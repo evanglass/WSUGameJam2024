@@ -4909,8 +4909,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8e25cb4f8bbbc9468ef4e978bc51839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraTransform: {fileID: 0}
-  muzzleTransform: {fileID: 0}
+  targetLayers:
+    serializedVersion: 2
+    m_Bits: 247
+  cameraTransform: {fileID: 189902177}
+  muzzleTransform: {fileID: 189902177}
   gunDamage: 0
   centerOfMass: {fileID: 663862131}
   health: 4

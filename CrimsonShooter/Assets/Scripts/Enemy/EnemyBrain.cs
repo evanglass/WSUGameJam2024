@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyBrain : MonoBehaviour {
+public class EnemyBrain : MonoBehaviour, ITakesShots {
     [SerializeField] private EnemyState startingState;
     private Animator animator;
     private NavMeshAgent navMeshAgent;
@@ -38,6 +38,7 @@ public class EnemyBrain : MonoBehaviour {
         }
     }
     private void OnEnable() {
+        health = maxHealth;
         SwitchState(startingState);
 
         if (animator == null) {
@@ -102,5 +103,16 @@ public class EnemyBrain : MonoBehaviour {
         animator.SetFloat("RightVelocity", rightVelocity);
 
 
+    }
+    private float health;
+    [SerializeField] private float maxHealth;
+
+    public bool TakeShot(float damage) {
+        health -= damage;
+        if (health <= 0) {
+            Die();
+            return true;
+        }
+        return false;
     }
 }

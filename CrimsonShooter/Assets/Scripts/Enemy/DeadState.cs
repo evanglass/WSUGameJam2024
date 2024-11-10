@@ -9,4 +9,5 @@ public class DeadState : EnemyState
         rc.TriggerRagdoll();
         navMeshAgent.enabled = false;
     }
+
 }
