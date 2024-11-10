@@ -1,10 +1,14 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneManager : MonoBehaviour
 {
     [SerializeField]
-    private SceneDefinition menuScene;
+    private Camera loadingCamera;
+
+    [SerializeField]
+    private SceneDefinitionContainer menuScene;
 
     private SceneDefinition activeScene;
 
@@ -13,12 +17,29 @@ public class SceneManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        if (Instance == null)
+        if (Instance != null && Instance != this)
             Destroy(gameObject);
 
         Instance = this;
 
-        UnityEngine.SceneManagement.SceneManager.LoadScene(menuScene.SceneBuildIndex, LoadSceneMode.Additive);
+        menuScene.Compile();
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene(menuScene.SceneDefinition.SceneBuildIndex, LoadSceneMode.Additive);
+
+        activeScene = menuScene.SceneDefinition;
+
+        UnityEngine.SceneManagement.SceneManager.sceneUnloaded += OnUnloadScene;
+        UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnLoadScene;
+    }
+
+    private void OnUnloadScene(Scene scene)
+    {
+
+    }
+
+    private void OnLoadScene(Scene scene, LoadSceneMode lsm)
+    {
+
     }
 
     public void ChangeScene(SceneDefinition scene)

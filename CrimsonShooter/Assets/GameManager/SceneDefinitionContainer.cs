@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class SceneDefinitionContainer : MonoBehaviour
@@ -13,9 +14,16 @@ public class SceneDefinitionContainer : MonoBehaviour
 
     public void Compile()
     {
-        if (nextScene != null)
+        Compile(new List<SceneDefinitionContainer>());
+    }
+
+    public void Compile(List<SceneDefinitionContainer> traversed)
+    {
+        traversed.Add(this);
+
+        if (nextScene != null && !traversed.Contains(nextScene))
         {
-            nextScene.Compile();
+            nextScene.Compile(traversed);
             SceneDefinition = new SceneDefinition(scene, nextScene.SceneDefinition);
         }
         else
