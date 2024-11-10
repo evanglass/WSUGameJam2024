@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 60
+  bulletHolePrefab: {fileID: 2281504855690746160, guid: 3c1628bd7d770c54a999ccc7d64b42ed, type: 3}
 --- !u!54 &-6233524648326567234
 Rigidbody:
   m_ObjectHideFlags: 0

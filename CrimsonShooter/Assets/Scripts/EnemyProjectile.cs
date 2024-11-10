@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyProjectile : MonoBehaviour {
     [SerializeField] private float velocity;
     private Rigidbody rb;
+    public GameObject bulletHolePrefab;
+    private Vector3 prevPosition;
 
     private void OnEnable() {
         rb = GetComponent<Rigidbody>();
@@ -26,7 +28,12 @@ public class EnemyProjectile : MonoBehaviour {
     private void OnCollisionEnter(Collision collision) {
         if (collision.transform.tag.Equals("Player")) {
             collision.transform.GetComponent<Player>().TakeDamage();
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
+        else
+        {
+            Instantiate(bulletHolePrefab, collision.GetContact(0).point + (collision.GetContact(0).normal / 100.0f), Quaternion.LookRotation(-collision.GetContact(0).normal));
+            Destroy(gameObject);
+        }
     }
 }
