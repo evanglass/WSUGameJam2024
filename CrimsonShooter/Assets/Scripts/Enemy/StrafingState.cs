@@ -8,13 +8,28 @@ public class StrafingState : EnemyState
     [SerializeField] private float strafeDistance = 3f;
     [SerializeField] private float maxStrafeTime = 4f;
     [SerializeField] private EnemyState movingToPlayerState;
+    [SerializeField] private Vector2 randomShotTimeRange;
+
+    private float shotTimer;
+    private float timeUntilNextShot;
+    private void FireShot() {
+        shotTimer = 0f;
+        timeUntilNextShot = Random.Range(randomShotTimeRange.x, randomShotTimeRange.y);
+        Debug.Log("SHOT FIRED");
+
+    }
     protected override void OnEnable() {
         base.OnEnable();
         Debug.Log("Entered Strafe State");
         navMeshAgent.updateRotation = false;
         BeginStrafe();
+        timeUntilNextShot = Random.Range(0f, 2f);
     }
     private void Update() {
+        shotTimer += Time.deltaTime;
+        if(shotTimer > timeUntilNextShot) {
+            FireShot();
+        }
         navMeshAgent.transform.rotation = Utilities.GetRotationTowardsTarget(
             navMeshAgent.transform,
             player.transform,

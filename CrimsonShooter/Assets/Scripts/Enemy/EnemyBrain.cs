@@ -10,10 +10,13 @@ public class EnemyBrain : MonoBehaviour {
     private IKControl ikControl;
     private Muzzle muzzle;
     private Player player;
+    private RagdollController rc;
 
     [SerializeField] private GameObject muzzleFlash;
     [SerializeField] private EnemyProjectile enemyProjectilePrefab;
     [SerializeField] private float innaccuracy;
+
+
     public void Shoot(Transform target) {
         if (ikControl != null) {
             ikControl.Fire();
@@ -63,6 +66,9 @@ public class EnemyBrain : MonoBehaviour {
                 Debug.Log("No Player found");
             }
         }
+        if (rc == null) {
+            rc = GetComponentInParent<RagdollController>();
+        }
     }
 
     public void SetAimTarget(Transform aimTarget) {
@@ -77,12 +83,14 @@ public class EnemyBrain : MonoBehaviour {
         }
     }
 
-    private void Update() {
-
-        if (Input.GetKeyDown(KeyCode.T)) {
-            Shoot(player.GetCenterOfMass());
+    public void Die() {
+        DeadState deadState = GetComponentInChildren<DeadState>(true);
+        if (deadState != null) {
+            SwitchState(deadState);
         }
 
+    }
+    private void Update() {
 
         float forwardVelocity = Vector3.Dot(transform.forward, navMeshAgent.velocity.normalized) * navMeshAgent.velocity.magnitude;
         float rightVelocity = Vector3.Dot(transform.right, navMeshAgent.velocity.normalized) * navMeshAgent.velocity.magnitude;

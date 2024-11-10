@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 3995957555724598969}
   - component: {fileID: 6106742389684699641}
   - component: {fileID: 9113790200822294359}
+  - component: {fileID: 8381206801191681727}
   m_Layer: 0
   m_Name: SecurityGuard
   m_TagString: Untagged
@@ -147,6 +148,19 @@ MonoBehaviour:
   rightHandObj: {fileID: 5043384559383386070}
   leftHandObj: {fileID: 7548184686931726733}
   recoilDistance: 0.18
+--- !u!114 &8381206801191681727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467298108941749069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36b637b68612c9a4bb9133de1e061d43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 6106742389684699641}
 --- !u!1 &1513552477933941130
 GameObject:
   m_ObjectHideFlags: 0

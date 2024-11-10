@@ -4,22 +4,22 @@ using UnityEngine;
 using UnityEngine.AI;
 
 
-public abstract class EnemyState : MonoBehaviour
-{
+public abstract class EnemyState : MonoBehaviour {
     protected Animator animator;
     protected NavMeshAgent navMeshAgent;
     protected Muzzle muzzle;
     protected Player player;
     protected EnemyBrain brain;
+    protected RagdollController rc;
 
     protected virtual void OnEnable() {
         if (brain == null) {
             brain = GetComponentInParent<EnemyBrain>();
-            if(brain == null) {
+            if (brain == null) {
                 Debug.Log("No brain found.");
             }
         }
-        if(animator == null) {
+        if (animator == null) {
             animator = GetComponentInParent<Animator>();
             if (animator == null) { Debug.Log("No animator found."); }
         }
@@ -37,6 +37,12 @@ public abstract class EnemyState : MonoBehaviour
             player = FindAnyObjectByType<Player>();
             if (player == null) {
                 Debug.Log("No Player found");
+            }
+        }
+        if (rc == null) {
+            rc = GetComponentInParent<RagdollController>();
+            if (rc == null) {
+                Debug.Log("no Ragdoll Controller found.");
             }
         }
     }
