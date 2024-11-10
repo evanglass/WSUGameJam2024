@@ -18,7 +18,6 @@ public class PlayerTriggerVolume : MonoBehaviour
     {
         if (other.CompareTag("Player") && !(once && hasTriggeredOn))
         {
-            Debug.Log("Triggered");
             Touch.Invoke();
             hasTriggeredOn = true;
         }
@@ -28,7 +27,6 @@ public class PlayerTriggerVolume : MonoBehaviour
     {
         if (other.CompareTag("Player") && !(once && hasTriggeredOff))
         {
-            Debug.Log("UnTriggered");
             Untouch.Invoke();
             hasTriggeredOff = true;
         }

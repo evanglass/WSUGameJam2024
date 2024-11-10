@@ -9,10 +9,14 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask targetLayers;
     [SerializeField] private GameObject muzzleFlashPrefab;
     [SerializeField] private GameObject bulletHolePrefab;
+    [SerializeField] private int maxAmmo;
+
+    private int ammo;
 
     private Animator animator;
     private void Awake() {
         animator = GetComponentInChildren<Animator>();
+        ammo = maxAmmo;
     }
     private void Shoot() {
         animator.SetTrigger("Fire");
@@ -38,6 +42,8 @@ public class Player : MonoBehaviour
             bulletHole.transform.localScale = new Vector3(0.01f / bulletHole.transform.lossyScale.x, 0.01f / bulletHole.transform.lossyScale.y, 1 / bulletHole.transform.lossyScale.z);
             
             muzzleTransform.GetComponent<AudioSource>().Play();
+
+            ammo--;
             
         } else {
             trail.Initialize(muzzleTransform.position + cameraTransform.forward * maxRange);
@@ -66,9 +72,22 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0) && ammo > 0) {
             Shoot();
         }
+
+        if (ammo != maxAmmo && Input.GetKeyDown(KeyCode.R))
+        {
+            animator.SetTrigger("Reload");
+            animator.SetBool("HasReloaded", false);
+            ammo = -1;
+        }
+
+        if (ammo == -1 && animator.GetBool("HasReloaded"))
+        {
+            ammo = maxAmmo;
+        }
+
         //if(dead)
         //{
         //    // DIE
