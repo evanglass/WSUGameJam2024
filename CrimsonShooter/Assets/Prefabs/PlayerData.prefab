@@ -346,7 +346,7 @@ MonoBehaviour:
     m_Bits: 247
   muzzleFlashPrefab: {fileID: 6940667806739951160, guid: 9dcbd457bff6f2247825677344156d84, type: 3}
   bulletHolePrefab: {fileID: 2281504855690746160, guid: 3c1628bd7d770c54a999ccc7d64b42ed, type: 3}
-  maxAmmo: 5
+  maxAmmo: 10
   playerBulletTrailPrefab: {fileID: 1863393579866791843, guid: c641fd1f5535f77458173a40750f052a, type: 3}
   cameraTransform: {fileID: 4041578944875271414}
   muzzleTransform: {fileID: 7909590427281026385}
@@ -428,8 +428,8 @@ GameObject:
   - component: {fileID: 6150078486925509429}
   - component: {fileID: 1458652940459629259}
   - component: {fileID: 6977542320004988097}
-  - component: {fileID: 5099781010768241184}
-  - component: {fileID: 8629117272520471580}
+  - component: {fileID: 4908237674882173660}
+  - component: {fileID: 4717891122669799445}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -592,7 +592,7 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!82 &5099781010768241184
+--- !u!82 &4908237674882173660
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -688,7 +688,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!95 &8629117272520471580
+--- !u!95 &4717891122669799445
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -766,7 +766,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7909590427281026385}
   - component: {fileID: 3274840355859605860}
-  - component: {fileID: 6928109413224305069}
+  - component: {fileID: 5337035844612799516}
   m_Layer: 3
   m_Name: MuzzleTransform
   m_TagString: Untagged
@@ -885,7 +885,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &6928109413224305069
+--- !u!82 &5337035844612799516
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

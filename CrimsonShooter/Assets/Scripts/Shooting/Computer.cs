@@ -23,17 +23,14 @@ public class Computer : MonoBehaviour, ITakesShots
                     go.GetComponent<Wireframe>().UseWireframe = true;
                     if (computersOnLevel == 3)
                     {
-                        Debug.Log("A");
                         go.GetComponent<Wireframe>().SetSpecificMats(new int[] { 0, 3 });
                     }
                     else if (computersOnLevel == 2)
                     {
-                        Debug.Log("B");
                         go.GetComponent<Wireframe>().SetSpecificMats(new int[] { 1, 5 });
                     }
                     else if (computersOnLevel == 1)
                     {
-                        Debug.Log("C");
                         go.GetComponent<Wireframe>().SetSpecificMats(new int[] { 2, 4 });
                     }
                 }

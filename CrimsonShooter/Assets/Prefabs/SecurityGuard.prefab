@@ -80,7 +80,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1380089839106651356
 Transform:
   m_ObjectHideFlags: 0
@@ -109,6 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onActivateState: {fileID: 8350301579607507007}
+  room: 0
 --- !u!1 &1740607313892547225
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,7 +348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1afa13438d99ca43a199aa432e641eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingState: {fileID: 8350301579607507007}
+  startingState: {fileID: 1583361223372649472}
   muzzleFlash: {fileID: 6940667806739951160, guid: 9dcbd457bff6f2247825677344156d84, type: 3}
   enemyProjectilePrefab: {fileID: -1736261065240720055, guid: db813c49d8526c54789b4f91eeaa1228, type: 3}
   innaccuracy: 0.1
@@ -622,7 +623,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2602558692057474272
 Transform:
   m_ObjectHideFlags: 0
