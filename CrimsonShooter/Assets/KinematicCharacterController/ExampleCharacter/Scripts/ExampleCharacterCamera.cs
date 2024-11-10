@@ -5,8 +5,57 @@ using UnityEngine;
 
 namespace KinematicCharacterController.Examples
 {
+
+
     public class ExampleCharacterCamera : MonoBehaviour
     {
+        private void Start() {
+            GameManager.Instance.OnCameraShake += GameManager_OnCameraShake;
+        }
+        float timer = 0;
+        private void GameManager_OnCameraShake(object sender, System.EventArgs e) {
+            timer = 0f;
+            lastShakeMovement = Vector3.zero;
+
+            StartCoroutine(ShakeCamera());
+
+        }
+        private IEnumerator ShakeCamera() {
+            bool end = false;
+            float tempShakeFactor = shakeFactor;
+
+            while (!end) {
+                tempShakeFactor *= 0.95f;
+                float timeBetweenMovements = 0.02f;
+                yield return new WaitForSeconds(timeBetweenMovements);
+                timer += timeBetweenMovements;
+                if (lastShakeMovement == Vector3.zero) {
+                    lastShakeMovement = UnityEngine.Random.insideUnitSphere * tempShakeFactor;
+                } else {
+                    lastShakeMovement = -lastShakeMovement;
+                    lastShakeMovement = Vector3.zero;
+                }
+                if (timer > 1f) {
+                    end = true;
+                }
+            }
+
+
+        }
+
+        private Vector3 lastShakeMovement;
+
+
+
+
+
+
+        [SerializeField] private float shakeFactor;
+
+
+
+
+
         [Header("Framing")]
         public Camera Camera;
         public Vector2 FollowPointFraming = new Vector2(0f, 0f);
@@ -73,6 +122,8 @@ namespace KinematicCharacterController.Examples
             PlanarDirection = Vector3.forward;
         }
 
+
+
         // Set the transform that the camera will orbit around
         public void SetFollowTransform(Transform t)
         {
@@ -94,6 +145,8 @@ namespace KinematicCharacterController.Examples
                     rotationInput.y *= -1f;
                 }
 
+                
+
                 // Process rotation input
                 Quaternion rotationFromInput = Quaternion.Euler(FollowTransform.up * (rotationInput.x * RotationSpeed));
                 PlanarDirection = rotationFromInput * PlanarDirection;
@@ -107,6 +160,9 @@ namespace KinematicCharacterController.Examples
 
                 // Apply rotation
                 Transform.rotation = targetRotation;
+
+                Quaternion shakeRotation = Quaternion.Euler(transform.eulerAngles + lastShakeMovement);
+                Transform.rotation = shakeRotation;
 
                 // Process distance input
                 if (_distanceIsObstructed && Mathf.Abs(zoomInput) > 0f)
