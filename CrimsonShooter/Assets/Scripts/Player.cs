@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask targetLayers;
     [SerializeField] private GameObject muzzleFlashPrefab;
     [SerializeField] private GameObject bulletHolePrefab;
+    [SerializeField] private SceneDefinitionContainer menuScene;
     [SerializeField] private Image vignette;
     [SerializeField] private CanvasGroup deathMessage;
     [SerializeField] private int maxAmmo;
@@ -110,6 +111,11 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.Instance.ChangeScene(menuScene.SceneDefinition);
+        }
+
         health = Mathf.MoveTowards(health, maxHealth, healthRecoveryRate * Time.deltaTime);
         vignette.color = new Color(vignette.color.r, vignette.color.g, vignette.color.b, ((float)maxHealth - (float)health) / (float)maxHealth);
 

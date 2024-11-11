@@ -1,5 +1,51 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &948949377340907950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1544850109143994855}
+  - component: {fileID: 1340798643808670263}
+  m_Layer: 3
+  m_Name: MenuScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1544850109143994855
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948949377340907950}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8485753561983906992}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1340798643808670263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948949377340907950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed810cf6a244744087c0e34c4416b42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildIndex: 1
+  nextScene: {fileID: 0}
 --- !u!1 &1400548993451155148
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,6 +178,7 @@ Transform:
   - {fileID: 852962536395253564}
   - {fileID: 6152459006221457033}
   - {fileID: 8562417597908534450}
+  - {fileID: 1544850109143994855}
   m_Father: {fileID: 3301717949537501380}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6090746805508156947
@@ -249,10 +296,12 @@ MonoBehaviour:
     m_Bits: 192
   muzzleFlashPrefab: {fileID: 6940667806739951160, guid: 9dcbd457bff6f2247825677344156d84, type: 3}
   bulletHolePrefab: {fileID: 2281504855690746160, guid: 3c1628bd7d770c54a999ccc7d64b42ed, type: 3}
+  menuScene: {fileID: 1340798643808670263}
   vignette: {fileID: 0}
   deathMessage: {fileID: 0}
   maxAmmo: 10
   ammo: 0
+  meleeOnly: 0
   playerBulletTrailPrefab: {fileID: 1863393579866791843, guid: c641fd1f5535f77458173a40750f052a, type: 3}
   cameraTransform: {fileID: 4041578944875271414}
   muzzleTransform: {fileID: 7909590427281026385}
