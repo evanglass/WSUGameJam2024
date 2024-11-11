@@ -30,8 +30,13 @@ namespace KinematicCharacterController.Examples
             CharacterCamera.IgnoredColliders.AddRange(Character.GetComponentsInChildren<Collider>());
         }
 
-        private void Update()
-        {
+        private void Update(){
+            if (Input.GetKeyDown(KeyCode.LeftBracket)) {
+                mouseSensitivity *= 0.9f;
+            }
+            if (Input.GetKeyDown(KeyCode.RightBracket)) {
+                mouseSensitivity *= 1.111f;
+            }
             if (Input.GetMouseButtonDown(0))
             {
                 Cursor.lockState = CursorLockMode.Locked;
