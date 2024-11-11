@@ -3,16 +3,46 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MessageManager : MonoBehaviour
 {
+    public static MessageManager Instance { get; private set; }
+
+    // Start is called before the first frame update
+    void Awake()
+    {
+        if (Instance != null && Instance != this)
+            Destroy(gameObject);
+
+        Instance = this;
+    }
+
+    private void Start()
+    {
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Level 1")
+        {
+            messageNum = 0;
+        }
+
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Level 2")
+        {
+            messageNum = 3;
+        }
+
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Level 3")
+        {
+            messageNum = 6;
+        }
+    }
+
     public void DisplayMessage(string msg)
     {
         GameObject.FindGameObjectWithTag("MessageText").GetComponent<Animator>().SetTrigger("Appear");
         GameObject.FindGameObjectWithTag("MessageText").GetComponentInChildren<TextMeshProUGUI>().text = msg;
     }
 
-    private static int messageNum = 0;
+    private int messageNum = 0;
     static string[] orderedMessages =
     {
         "What are you doing?",
@@ -26,7 +56,7 @@ public class MessageManager : MonoBehaviour
         "You don't have to do this."
     };
 
-    public static void OrderedMessage()
+    public void OrderedMessage()
     {
         GameObject.FindGameObjectWithTag("MessageText").GetComponent<Animator>().SetTrigger("Appear");
         GameObject.FindGameObjectWithTag("MessageText").GetComponentInChildren<TextMeshProUGUI>().text = orderedMessages[messageNum];
