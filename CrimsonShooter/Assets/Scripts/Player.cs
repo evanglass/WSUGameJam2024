@@ -82,6 +82,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private Transform cameraTransform;
     [SerializeField] private Transform muzzleTransform;
+    [SerializeField] private GameObject gunObj;
 
     [SerializeField] private float gunDamage;
     [SerializeField] private float meleeDamage;
@@ -106,9 +107,16 @@ public class Player : MonoBehaviour
     {
         if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Level 3")
         {
-            meleeOnly = true;
+            SetMelee();
         }
     }
+
+    public void SetMelee()
+    {
+        gunObj.SetActive(false);
+        meleeOnly = true;
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
