@@ -20,6 +20,8 @@ namespace KinematicCharacterController.Examples
 
         private void Start()
         {
+            mouseSensitivity = SceneManager.Instance.sensitivity;
+
             Cursor.lockState = CursorLockMode.Locked;
 
             // Tell camera to follow transform
@@ -33,9 +35,12 @@ namespace KinematicCharacterController.Examples
         private void Update(){
             if (Input.GetKeyDown(KeyCode.LeftBracket)) {
                 mouseSensitivity *= 0.9f;
+                SceneManager.Instance.sensitivity = mouseSensitivity;
             }
             if (Input.GetKeyDown(KeyCode.RightBracket)) {
                 mouseSensitivity *= 1.111f;
+                SceneManager.Instance.sensitivity = mouseSensitivity;
+
             }
             if (Input.GetMouseButtonDown(0))
             {

@@ -4,6 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneManager : MonoBehaviour
 {
+
+    public float sensitivity;
+
     [SerializeField]
     private Camera loadingCamera;
 
@@ -17,6 +20,7 @@ public class SceneManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        sensitivity = 1.0f;
         if (Instance != null && Instance != this)
             Destroy(gameObject);
 
