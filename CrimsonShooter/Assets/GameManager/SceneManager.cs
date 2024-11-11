@@ -49,6 +49,7 @@ public class SceneManager : MonoBehaviour
         // Loading bar?
 
         UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(scene.SceneBuildIndex, LoadSceneMode.Additive);
+        
         activeScene = scene;
     }
 

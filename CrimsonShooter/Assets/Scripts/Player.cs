@@ -113,6 +113,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            menuScene.Compile();
             SceneManager.Instance.ChangeScene(menuScene.SceneDefinition);
         }
 
