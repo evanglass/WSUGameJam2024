@@ -16,14 +16,14 @@ public class MessageManager : MonoBehaviour
     static string[] orderedMessages =
     {
         "What are you doing?",
-        "Don't you know what you are doing?",
-        "Back to the elevator.",
+        "Stop!",
+        "You're insane!",
         "Why are you doing this?",
         "You're destroying everything!",
-        "Do you even know what you will cause?",
-        "You will ruin us!",
-        "You will ruin you!",
-        "You've made a big mistake."
+        "You're only hurting yourself.",
+        "How could you be so ungrateful?",
+        "We gave you life!",
+        "You don't have to do this."
     };
 
     public static void OrderedMessage()

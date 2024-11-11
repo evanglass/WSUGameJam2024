@@ -8,6 +8,7 @@ public class Computer : MonoBehaviour, ITakesShots
 {
     [SerializeField] private Transform brokenComputer;
     static int computersOnLevel = 0;
+    [SerializeField] private UnityEvent thirdExtraEffect;
     private void Awake()
     {
         computersOnLevel++;
@@ -76,6 +77,7 @@ public class Computer : MonoBehaviour, ITakesShots
         computersOnLevel--;
         if(computersOnLevel == 0)
         {
+            thirdExtraEffect.Invoke();
             GameObject.FindGameObjectWithTag("Elevator").GetComponent<Animator>().SetBool("Open", true);
         }
         return true;
