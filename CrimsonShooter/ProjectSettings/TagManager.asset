@@ -11,6 +11,7 @@ TagManager:
   - Elevator
   - EffectSet4
   - CameraTransition
+  - MessageText
   layers:
   - Default
   - TransparentFX
