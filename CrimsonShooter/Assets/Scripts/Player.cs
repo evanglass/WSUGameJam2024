@@ -51,10 +51,10 @@ public class Player : MonoBehaviour
             trail.Initialize(muzzleTransform.position + cameraTransform.forward * maxRange);
         }
     }
-
     private void Melee()
     {
-        float maxRange = 5f;
+        animator.SetTrigger("Melee");
+        float maxRange = 2f;
         RaycastHit hit;
         if (Physics.SphereCast(cameraTransform.position, .2f, cameraTransform.forward, out hit, maxRange, targetLayers))
         {
@@ -67,7 +67,7 @@ public class Player : MonoBehaviour
             }
             if (hit.collider.gameObject.TryGetComponent(out Rigidbody rb))
             {
-                rb.AddForce(cameraTransform.forward * meleeDamage, ForceMode.Impulse);
+                rb.AddForce(Vector3.up * meleeDamage, ForceMode.Impulse);
             }
 
         }

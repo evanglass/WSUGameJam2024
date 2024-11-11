@@ -1,6 +1,7 @@
 using UnityEngine;
 
 public class DampedFollow : MonoBehaviour {
+
     public Transform target;         // The camera or hand that the gun should follow
     public float smoothTime = 0.1f;  // The time it takes to catch up to the target position
     public Vector3 positionOffset;   // Offset for the gun's position relative to the target
