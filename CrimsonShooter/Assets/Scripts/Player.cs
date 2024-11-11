@@ -113,7 +113,10 @@ public class Player : MonoBehaviour
 
     public void SetMelee()
     {
-        gunObj.SetActive(false);
+        if (gunObj == null)
+        {
+            gunObj.SetActive(false);
+        }
         meleeOnly = true;
     }
 
