@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     [SerializeField] private int maxAmmo;
 
     [SerializeField] private int ammo;
+    [SerializeField] private bool meleeOnly;
 
     private Animator animator;
     private void Awake() {
@@ -24,6 +25,8 @@ public class Player : MonoBehaviour
         Time.timeScale = 1f;
     }
     private void Shoot() {
+        if (meleeOnly)
+            return;
         animator.SetTrigger("Fire");
         float maxRange = 100f;
         RaycastHit hit;
@@ -97,6 +100,14 @@ public class Player : MonoBehaviour
     public GameObject healthBar;
 
     [SerializeField] private float healthRecoveryRate;
+
+    private void Start()
+    {
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Level 3")
+        {
+            meleeOnly = true;
+        }
+    }
     private void Update()
     {
         health = Mathf.MoveTowards(health, maxHealth, healthRecoveryRate * Time.deltaTime);

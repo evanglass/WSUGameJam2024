@@ -56,10 +56,21 @@ public class Computer : MonoBehaviour, ITakesShots
                 }
             }
         }
+        else if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Level 3")
+        {
+            GameObject[] gos = GameObject.FindGameObjectsWithTag("EffectSet" + (4-computersOnLevel));
+            foreach (GameObject go in gos)
+            {
+                if (go.GetComponent<Wireframe>())
+                {
+                    go.GetComponent<Wireframe>().UseWireframe = true;
+                }
+            }
+        }
         else
         {
             GameObject[] gos = GameObject.FindGameObjectsWithTag(tag);
-            
+
             foreach (GameObject go in gos)
             {
                 if (go.GetComponent<Wireframe>())
@@ -78,7 +89,8 @@ public class Computer : MonoBehaviour, ITakesShots
         if(computersOnLevel == 0)
         {
             thirdExtraEffect.Invoke();
-            GameObject.FindGameObjectWithTag("Elevator").GetComponent<Animator>().SetBool("Open", true);
+            if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "Level 3")
+                GameObject.FindGameObjectWithTag("Elevator").GetComponent<Animator>().SetBool("Open", true);
         }
         return true;
     }
