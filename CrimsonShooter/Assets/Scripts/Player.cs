@@ -107,6 +107,7 @@ public class Player : MonoBehaviour
                 SceneManager.Instance.ReloadScene();
             }
 
+            healthRecoveryRate = 0;
             Time.timeScale = 0f;
 
             return;
