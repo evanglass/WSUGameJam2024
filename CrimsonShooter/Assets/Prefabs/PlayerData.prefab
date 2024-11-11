@@ -262,7 +262,7 @@ MonoBehaviour:
   maxHealth: 1.1
   health: 4
   healthBar: {fileID: 0}
-  healthRecoveryRate: 0
+  healthRecoveryRate: 0.3
 --- !u!54 &8259118962095578616
 Rigidbody:
   m_ObjectHideFlags: 0
