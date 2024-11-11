@@ -246,7 +246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetLayers:
     serializedVersion: 2
-    m_Bits: 247
+    m_Bits: 192
   muzzleFlashPrefab: {fileID: 6940667806739951160, guid: 9dcbd457bff6f2247825677344156d84, type: 3}
   bulletHolePrefab: {fileID: 2281504855690746160, guid: 3c1628bd7d770c54a999ccc7d64b42ed, type: 3}
   vignette: {fileID: 0}
