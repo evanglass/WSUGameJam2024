@@ -83,8 +83,6 @@ public class Computer : MonoBehaviour, ITakesShots
 
         MessageManager.Instance.OrderedMessage();
 
-        Destroy(gameObject);
-        Instantiate(brokenComputer, transform.position, transform.rotation);
         computersOnLevel--;
         if(computersOnLevel == 0)
         {
@@ -92,6 +90,8 @@ public class Computer : MonoBehaviour, ITakesShots
             if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "Level 3")
                 GameObject.FindGameObjectWithTag("Elevator").GetComponent<Animator>().SetBool("Open", true);
         }
+        Destroy(gameObject);
+        Instantiate(brokenComputer, transform.position, transform.rotation);
         return true;
     }
 }
