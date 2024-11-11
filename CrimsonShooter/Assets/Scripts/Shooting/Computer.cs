@@ -11,6 +11,12 @@ public class Computer : MonoBehaviour, ITakesShots
     [SerializeField] private UnityEvent thirdExtraEffect;
     private void Awake()
     {
+        computersOnLevel = 0;
+    }
+
+    private void Start()
+    {
+
         computersOnLevel++;
     }
 
@@ -58,6 +64,7 @@ public class Computer : MonoBehaviour, ITakesShots
         }
         else if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Level 3")
         {
+
             GameObject[] gos = GameObject.FindGameObjectsWithTag("EffectSet" + (4-computersOnLevel));
             foreach (GameObject go in gos)
             {
@@ -90,8 +97,8 @@ public class Computer : MonoBehaviour, ITakesShots
             if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "Level 3")
                 GameObject.FindGameObjectWithTag("Elevator").GetComponent<Animator>().SetBool("Open", true);
         }
-        Destroy(gameObject);
         Instantiate(brokenComputer, transform.position, transform.rotation);
+        Destroy(gameObject);
         return true;
     }
 }
