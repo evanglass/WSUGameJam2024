@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         ammo = maxAmmo;
         health = maxHealth;
+        Time.timeScale = 1f;
     }
     private void Shoot() {
         animator.SetTrigger("Fire");
@@ -105,6 +106,8 @@ public class Player : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space)) {
                 SceneManager.Instance.ReloadScene();
             }
+
+            Time.timeScale = 0f;
 
             return;
         }
