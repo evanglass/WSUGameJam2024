@@ -20,6 +20,19 @@ public class TextSceneManager : MonoBehaviour
     private void Start()
     {
         GetComponentsInChildren<TextMeshProUGUI>()[0].text = dialogues[0];
+
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Level 1")
+        {
+            dialogueIndex = 0;
+        }
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Level 2")
+        {
+            dialogueIndex = 3;
+        }
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Level 3")
+        {
+            dialogueIndex = 6;
+        }
     }
 
     private IEnumerator LoadSceneLate()
