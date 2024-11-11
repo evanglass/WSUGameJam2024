@@ -113,7 +113,7 @@ public class Player : MonoBehaviour
 
     public void SetMelee()
     {
-        if (gunObj == null)
+        if (gunObj != null)
         {
             gunObj.SetActive(false);
         }
