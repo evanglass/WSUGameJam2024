@@ -6,18 +6,13 @@ using UnityEngine.UI;
 
 public class TextSceneManager : MonoBehaviour
 {
-    private string[] dialogues =
-    {
-        "Dialogue 1 (Press Enter to continue)",
-        "Dialogue 2 (Press Enter to continue)",
-        "Attack the project manager? (Press Enter to continue)",
-        "",
-        "(Press Enter to continue)",
-        "Dialogue 3 (Press Enter to continue)",
-        "Dialogue 4 (Press Enter to continue)",
-        "*dies*",
-        ""
-    };
+    [SerializeField] private int attackIndex;
+    [SerializeField] private int explodeIndex;
+    [SerializeField] private int playerDieIndex;
+    [SerializeField] private float fadeInRate;
+    [SerializeField] private CanvasGroup canvasGroup;
+
+    public string[] dialogues;
     public int dialogueIndex = 0;
     private bool ceoDead = false;
     private bool outroFade = false;
@@ -32,44 +27,45 @@ public class TextSceneManager : MonoBehaviour
         yield return new WaitForSeconds(6);
         SceneManager.Instance.NextScene();
     }
-
+    bool fadeOut = false;
     void Update()
     {
-        if (outroFade)
+        if (fadeOut) {
+            canvasGroup.alpha = Mathf.MoveTowards(canvasGroup.alpha, 1, Time.deltaTime * fadeInRate);
             return;
-        if(!ceoDead && GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("finish attacking"))
-        {
+        }
+
+
+        if (!ceoDead && GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("finish attacking")) {
             ceoDead = true;
             dialogueIndex++;
             GetComponent<Animator>().SetBool("Attack PM", false);
             GetComponentsInChildren<TextMeshProUGUI>()[0].text = dialogues[dialogueIndex];
         }
-        if(Input.GetButtonDown("Submit") && GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("idle"))
+        if (Input.anyKeyDown && GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("idle"))
         {
             dialogueIndex++;
             GetComponentsInChildren<TextMeshProUGUI>()[0].text = dialogues[dialogueIndex];
         }
-        if(dialogueIndex == 3)
+        if(dialogueIndex == attackIndex)
         {
             // attack pm
             GetComponent<Animator>().SetBool("Attack PM", true);
         }
-        if(dialogueIndex == 5)
+        if(dialogueIndex == explodeIndex)
         {
             GetComponent<Animator>().SetBool("PM Explode", true);
         }
 
-        if(dialogueIndex == dialogues.Length - 2)
+        if(dialogueIndex == playerDieIndex)
         {
             // die
             GetComponent<Animator>().SetBool("Player Implode", true);
         }
-        if(dialogueIndex == dialogues.Length - 1)
-        {
-            Debug.Log("game over");
-            GameObject.FindGameObjectWithTag("CameraTransition").GetComponent<Animator>().SetBool("FadeOut", true);
+        if (dialogueIndex == dialogues.Length - 1) {
+
             StartCoroutine("LoadSceneLate");
-            outroFade = true;
+            fadeOut = true;
         }
     }
 
